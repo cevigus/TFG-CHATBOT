@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const { sendMessageToDialogflow } = require('./dialogflowClient'); // Asegúrate de tener este archivo configurado
+const { sendMessageToDialogflow } = require('./Backend/dialogflowClient'); // Asegúrate de tener este archivo configurado
 const mongoose = require('mongoose');
 require('dotenv').config();
 
