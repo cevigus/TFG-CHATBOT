@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Estilos/css_general.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_chatbot.css" type="text/css">
+    <title>SafeChat | Detector de Bullying</title>  
+    <link rel="icon" type="image/x-icon" href="../Imagenes/bot logo.ico">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+           <a href="../index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
+        </div>
+        
+        <nav class="nav-menu" id="nav-menu">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+           <li><a href="./bullying.html">Bullying</a>
+                <ul class="sublista" id="desplegable">
+                  <li><a href="./que_es_bullying.html">Qué es</a></li>
+                  <li><a href="./como_se_produce.html">Cómo se produce</a></li>
+                  <li><a href="./cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
+                  <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
+                  <li><a href="./consecuencias.html">Consecuencias</a></li>
+              </ul>
+            </li>
+            <li><a href="../Paginas/chatbot.html">Chat</a></li>
+            <li><a href="../Paginas/ayuda.html">Ayuda</a></li>
+            <li><a href="../Paginas/sobre_nosotros.html">Sobre Nosotros</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <h1 class="titulo">SafeChat - Tu Espacio Seguro</h1>
+
+  <div class="parrafo">
+    <p><strong>¿Cómo puede ayudarte SafeChat?</strong> SafeChat es un asistente virtual diseñado para ayudarte a identificar posibles situaciones de acoso escolar (bullying). Puedes conversar de forma anónima y segura,
+       expresar tus inquietudes, o compartir lo que te ocurre. 
+      Nuestro chatbot está programado para detectar patrones relacionados
+      con el bullying y ofrecerte apoyo o recursos. Recuerda que no estás solo/a.
+       Este espacio es confidencial y está pensado para ayudarte.</p>
+  </div>
+
+<section id="datos-usuario">
+  <form id="formulario">
+    <p class="form-info">
+      ¿Te gustaría compartir género y edad de forma anónima? (opcional)
+    </p>
+
+    <label for="edad">Edad:</label>
+    <select id="edad" name="edad" required>
+      <option value="">Selecciona</option>
+      <option value="10-13">10-13</option>
+      <option value="14-16">14-16</option>
+      <option value="17-19">17-19</option>
+    </select>
+
+    <label for="genero">Género:</label>
+    <select id="genero" name="genero" required>
+      <option value="">Selecciona</option>
+      <option value="chico">Chico</option>
+      <option value="chica">Chica</option>
+      <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+    </select>
+
+   <button id="boton" onclick="enviarDatosUsuario()" style="margin-left: 20px;">Enviar</button>
+  </form>
+</section>
+    
+
+  <div class="grupo1">
+   <!--Imagen Izquierda -->
+    <div class="chatbot_izquierda">
+      <img src="../Imagenes/chatbot.png" alt="Imagen del chatbot" />
+    </div>
+
+    <!--ChatBot -->
+    <div class="chatbot">
+          <div class="header">
+              SafeChat | Detector de Bullying
+          </div>
+          
+          <div class="messages" id="messages">
+              <div class="message-container">
+                  <img src="../Imagenes/imagen.png" class="bot-avatar" alt="Bot avatar">
+                  <div class="message bot">
+                      Hola, soy SafeChat. Comenzemos a hablar.
+                  </div>
+              </div>
+          </div>
+          
+          <div class="input-area">
+              <input type="text" id="input" placeholder="Escribe aquí..." autocomplete="off">
+              <button id="send">Enviar</button>
+          </div>
+      </div>
+       <!-- Tips a la derecha -->
+        <div class="tips">
+          <h2>Tips para usar SafeChat</h2>
+          <ul>
+            <li>Saluda al chat antes de comenzar</li>
+            <li>Utiliza frases cortas y sencillas</li>
+            <li>Evita el lenguaje vulgar</li>
+          </ul>
+        </div>
+ </div>
+ <div class="chatbot-encuesta" style="text-align: center; margin: 20px auto;">
+<p>Tu opinión es importante. <a href="https://forms.gle/tcAFYz3ukUQf5PUx7" target="_blank">Responde esta encuesta anónima</a> para mejorar SafeChat.</p>
+</div>
+  
+    <footer>
+        <div class="footer-links">
+          <a href="../index.html">Inicio</a>
+          <a href="./Paginas/ayuda.html">Ayuda</a>
+          <a href="./Paginas/chatbot.html">Chatbot</a>
+          <a href="./Paginas/sobre_nosotros.html">Contacto</a>
+        </div>
+        <div class="help-resources">
+          <a href="https://aepae.es/" target="_blank">
+            <img src="../Imagenes/AEPAEEE.png" alt="Fundación AEPAE" class="help-icon">
+          </a>
+          <a href="https://www.anar.org/" target="_blank">
+            <img src="../Imagenes/ANAR.png" alt="Fundación ANAR" class="help-icon">
+          </a>
+          <a href="https://fundacioncolacao.org/directorio" target="_blank">
+            <img src="../Imagenes/colacao.png" alt="Fundación colacao" class="help-icon">
+          </a>
+        </div>
+        <div class="footer-info">
+          <h4>&copy; 2025 Página contra el Bullying. Todos los derechos reservados.</h4>
+          <h4>Para más información, contacta con nosotros.</h4>
+        </div>
+        <div class="footer-content">
+            <div class="social-icons">
+              <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                <img src="../Imagenes/tik-tok.png" alt="TikTok">
+              </a>
+              <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <img src="../Imagenes/facebook.png" alt="Facebook">
+              </a>
+              <a href="https://wa.me" target="_blank" aria-label="WhatsApp">
+                <img src="../Imagenes/whatsapp.png" alt="WhatsApp">
+              </a>
+              <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <img src="../Imagenes/instagram.png" alt="Instagram">
+              </a>
+            </div>
+          </div>
+      </footer>
+      <script src="../Scripts/chatbot.js"></script>
+</body>
+</html>

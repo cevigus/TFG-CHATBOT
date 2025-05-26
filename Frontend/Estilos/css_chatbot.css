@@ -1,0 +1,372 @@
+* {
+  box-sizing: border-box;
+}
+
+.titulo{
+  text-align: center; 
+  font-size: 32px; 
+  margin-top: 20px; 
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+.chatbot{
+
+  flex: 2; /* Hace que el chat ocupe más espacio */
+  height: 80vh; /* Usa el 90% de la altura */ /* Centrado automático */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #F0F9FF, #CDE7FF);
+  margin-top: 2%;
+  margin-left: 2%;
+  z-index: 1; 
+  margin-right: 15%;
+  width: 30%;
+  height: 500px; /* Tamaño fijo */
+  font-size: 16px;
+  padding: 15px;
+  
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #a0c4ff, #e1beff);
+  background-attachment: fixed;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Cabecera */
+.header {
+  background: linear-gradient(135deg, #4361ee, #3a0ca3);
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(90deg, 
+                rgba(255,255,255,0) 0%, 
+                rgba(255,255,255,0.2) 50%, 
+                rgba(255,255,255,0) 100%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Área de mensajes */
+.messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: #f8f9fe;
+  scroll-behavior: smooth;
+}
+
+/* Mensajes individuales */
+.message-container {
+  display: flex;
+  margin-bottom: 12px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Avatar del bot */
+.bot-avatar {
+  width: 38px;
+  height: 38px;
+  margin-right: 12px;
+  margin-top: 4px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4361ee;
+}
+
+/* Mensaje */
+.message {
+  max-width: calc(80% - 48px);
+  padding: 10px 14px;
+  font-size: 13.5px;
+  line-height: 1.4;
+  border-radius: 14px;
+}
+
+.bot {
+  background: white;
+  border-bottom-left-radius: 4px;
+  margin-right: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-left: 2px solid #4361ee;
+}
+
+.user {
+  background: #4361ee;
+  color: white;
+  border-bottom-right-radius: 4px;
+  margin-left: auto;
+  position: relative;
+}
+
+.user::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: rgba(255,255,255,0.1);
+  border-radius: inherit;
+  transform: scaleX(0);
+  transform-origin: right;
+  animation: wave 0.6s ease-out;
+}
+
+@keyframes wave {
+  to {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+
+/* Alertas */
+
+/* Área de entrada */
+.input-area {
+  padding: 12px;
+  display: flex;
+  background: white;
+  border-top: 1px solid #f0f0f0;
+}
+
+input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  outline: none;
+  font-size: 13.5px;
+  transition: border 0.2s;
+}
+
+input:focus,
+input:focus-visible {
+  border-color: #4361ee;
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+}
+
+button {
+  margin-left: 10px;
+  padding: 0 16px;
+  background: #4361ee;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: #3a56d4;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.typing {
+  display: inline-flex;
+  padding: 10px 14px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 12px;
+}
+
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  background: #4361ee;
+  border-radius: 50%;
+  margin: 0 2px;
+  animation: typing 1.2s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) { animation-delay: 0s; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-4px); }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 400px) {
+  .chatbot {
+    width: 60%;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .header {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .input-area input {
+    font-size: 12px;
+  }
+
+  .input-area button {
+    font-size: 12px;
+  }
+
+  .message {
+    font-size: 12px;
+  }
+}
+
+.help-footer {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  border-top: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+  .tips {
+    position: static;
+    margin: 20px auto;
+    width: 80%;
+  }
+}
+
+#datos-usuario {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    width: 50%;
+}
+
+#formulario {
+  background: none;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  width: 100%;
+}
+
+.form-info {
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+
+#formulario label {
+  font-weight: bold;
+}
+
+#formulario select{
+  padding: 8px 12px;
+    font-size: 15px;
+    margin: 0 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    
+}
+
+
+
+#formulario button {
+  background-color: #8c52ff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 20px;
+  width: 100px;
+}
+
+#formulario button:hover {
+  background-color: #6d3cd4;
+}
+
+
+.grupo1{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye los elementos */
+    align-items: center; /* Asegura que estén en la misma línea */
+    gap: 0; /* Reduce la separación */
+    padding: 2%;
+    max-width: 100%;
+
+
+}
+
+.chatbot_izquierda img{
+
+  width: 350px; /* Aumentar el tamaño */
+  height: auto;
+  position: absolute;
+  left: -15px; /* Lo desplaza más hacia la izquierda */
+  top: 50%; /* Lo coloca centrado verticalmente */
+  transform: translateY(-50%) rotate(-5deg); /* Simula que "abraza" el chat */
+  z-index: -1; /* Para que no tape otros elementos */
+
+}
+
+.tips{
+
+border: #4361ee 1px solid;
+border-radius: 20%;
+position: absolute;
+right: 5px; /* Ajusta la cercanía */
+width: 200px;
+margin-top: 10vh; /* Evita margen innecesario */
+z-index: 1; /* Asegura que esté sobre los demás elementos */
+padding: 15px;
+
+}
+
+.tips ul{
+
+padding: 4%;
+}
+
+.parrafo p{
+  font-size: 14px;
+    line-height: 1.6;
+    max-width: 70%;
+    margin: 0 auto;
+    text-align: justify;
+}

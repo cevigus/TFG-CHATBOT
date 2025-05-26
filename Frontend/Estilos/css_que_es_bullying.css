@@ -1,0 +1,105 @@
+.seccion{
+
+    display: inline-flex;
+    margin-top: 4%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    
+}
+
+.imagen{
+
+    height: 50%;
+    width: 50%;
+    margin-right: 5%;
+    margin-left: 12%;
+    border-radius: 10%;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover{
+
+    transform: scale(1.05);
+}
+
+.lista {
+
+    padding: 3%;
+    width: 20%;
+    height: 20%;
+    margin-left: 5%;
+    border:#5D5FEF 1px solid;
+    border-radius: 15%;
+}
+
+.lista li{
+    padding: 3%;
+    color: #5D5FEF;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+h2{
+
+    color: #5D5FEF;
+    text-align: center;
+    margin-top: 5%;
+
+}
+
+.clave{
+
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 3%;
+    margin: 10px 20px;
+    line-height: 1.6;
+
+}
+
+.parrafo2{
+
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+.lista2 {
+
+    margin-left: 3%;
+    padding: 5%;
+}
+
+.lista2 li{
+
+    padding: 1%;
+}
+
+a:visited{
+
+    color: #5D5FEF;
+     
+}
+
+.cierre {
+
+    background-color:  #e1beff; 
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 12px;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cierre h3 {
+    font-size: 1.8rem;
+    color: #005a9c; /* Azul más intenso */
+    margin-bottom: 0.5rem;
+}
+
+.cierre p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}

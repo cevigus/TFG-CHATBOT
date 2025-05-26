@@ -1,0 +1,114 @@
+
+ main {
+    padding: 40px 10%;
+    background: linear-gradient(to bottom, #EAF2FF, #DDEBFF);
+
+  }
+  
+  /* Secciones */
+  section {
+    margin-bottom: 60px;
+  }
+  
+  /* Intro */
+  .intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .intro-texto {
+    flex: 1;
+  }
+  
+  .intro-img {
+    flex: 1;
+  }
+
+
+  .intro-img img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .intro-img img:hover {
+    transform: scale(1.05);
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: #4b4b4b;
+  }
+
+  /* Info secciones con imágenes */
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .info-texto {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .info-img {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .info-img img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .info-img img:hover {
+    transform: scale(1.05);
+  }
+  
+  .info.nosotros {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 2px solid #ccc;
+  }
+  
+
+  body {
+    background: linear-gradient(to bottom, #EAF2FF, #DDEBFF);
+    color: #333333;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h1, h2, h3 {
+    color: #5D5FEF;
+  }
+  
+  a {
+    color: #5BA3FF;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    background-color: #A077FF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #8F66E8;
+  }
+
+  

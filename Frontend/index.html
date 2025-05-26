@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="../Frontend/Estilos/css_general.css" type="text/css">
+    <link rel="stylesheet" href="../Frontend/Estilos/css_index.css" type="text/css">
+    <link rel="stylesheet" href="../Frontend/Estilos/css_popup.css" type="text/css">
+    <link rel="stylesheet" href="../Frontend/Estilos/css_sublista_general.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="./Imagenes/bot logo.ico">
+    <script src="../Frontend/Scripts/popup.js"></script>
+</head>
+
+<!--Popup-->
+
+<div id="popup">
+  <div class="popup-contenido">
+    <h2>Aviso</h2><br>
+    <ul>
+      <p>Esta es una página web segura:</p><br>
+      <li>
+        Tienes la opción de <strong>"SALIR RAPIDO"</strong> Dispondrás de un botón siempre accesible en pantalla.
+      </li>
+      <li>
+          Borra tu historial de navegación para no dejar rastro después de informarte.
+      </li>
+      <li>
+          Utiliza el modo incógnito o privado de navegación, si no quieres que tu navegador guarde registro de los sitios web que visitas.
+      </li>
+    </ul><br>
+    <button type="submit" class="btn-entrar" onclick="cerrarPopup()">Entrar</button>
+  </div>
+</div>
+
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+           <a href="index.html"><img src="../Frontend/Imagenes/logo.jpg" alt="GGM"></a>    
+        </div>
+        
+        <nav class="nav-menu" id="nav-menu">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="./Paginas/bullying.html">Bullying</a>
+                <ul class="sublista" id="desplegable">
+                  <li><a href="./Paginas/que_es_bullying.html">Qué es</a></li>
+                  <li><a href="./Paginas/como_se_produce.html">Cómo se produce</a></li>
+                  <li><a href="./Paginas/cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
+                  <li><a href="./Paginas/perfiles_implicados.html">Perfiles implicados</a></li>
+                  <li><a href="./Paginas/consecuencias.html">Consecuencias</a></li>
+              </ul>
+            </li>
+            <li><a href="./Paginas/chatbot.html">Chat</a></li>
+            <li><a href="./Paginas/ayuda.html">Ayuda</a></li>
+            <li><a href="./Paginas/sobre_nosotros.html">Sobre Nosotros</a></li>
+          </ul>
+        </nav>  
+    </header>
+    <main> 
+      <section class="intro" id="inicio">
+          <div class="intro-texto">
+            <h2>Bienvenid@ a nuestra plataforma</h2>
+            <p>Esta página nace con el propósito de crear conciencia, apoyar y proporcionar herramientas a quienes sufren o conocen casos de bullying. Todos merecen un entorno seguro y respetuoso.</p>
+          </div>
+          <div class="intro-img">
+            <img src="Imagenes/niños_abrazados.jpg" alt="Niños abrazándose">
+          </div>
+        </section>
+    
+        <section class="info" id="que-es">
+          <div class="info-img izquierda">
+            <img src="Imagenes/stop_bullying.png" alt="Ilustración de bullying escolar">
+          </div>
+          <div class="info-texto">
+            <h2>¿Qué es el bullying?</h2>
+            <p>El bullying es un comportamiento agresivo, repetido y desequilibrado entre escolares. Puede ser físico, verbal o emocional. Reconocerlo es el primer paso para erradicarlo.</p>
+          </div>
+        </section>
+    
+        <section class="info" id="combatir">
+          <div class="info-texto">
+            <h2>¿Cómo podemos combatirlo?</h2>
+            <p>Con educación, apoyo emocional, intervención rápida y canales de comunicación seguros. Nuestra plataforma te conecta con recursos, personas y ayuda profesional.</p>
+          </div>
+          <div class="info-img derecha">
+            <img src="Imagenes/manos_unidas.avif" alt="Manos unidas en señal de ayuda">
+          </div>
+        </section>
+    
+        <section class="info nosotros" id="nosotros">
+          <h2>¿Quiénes somos?</h2>
+          <p>Un equipo comprometido con la lucha contra el bullying en los centros escolares. Colaboramos con fundaciones y profesionales para darte un espacio seguro y útil.</p>
+        </section>
+    
+      </main>
+    <footer>
+        <div class="footer-links">
+          <a href="./index.html">Inicio</a>
+          <a href="./Paginas/ayuda.html">Ayuda</a>
+          <a href="./Paginas/chatbot.html">Chatbot</a>
+          <a href="./Paginas/sobre_nosotros.html">Contacto</a>
+        </div>
+        <div class="help-resources">
+          <a href="https://aepae.es/" target="_blank">
+            <img src="./Imagenes/AEPAEEE.png" alt="Fundación AEPAE" class="help-icon">
+          </a>
+          <a href="https://www.anar.org/" target="_blank">
+            <img src="./Imagenes/ANAR.png" alt="Fundación ANAR" class="help-icon">
+          </a>
+          <a href="https://fundacioncolacao.org/directorio" target="_blank">
+            <img src="./Imagenes/colacao.png" alt="Fundación colacao" class="help-icon">
+          </a>
+        </div>
+        <div class="footer-info">
+          <h4>&copy; 2025 Página contra el Bullying. Todos los derechos reservados.</h4>
+          <h4>Para más información, contacta con nosotros.</h4>
+        </div>
+        <div class="footer-content">
+            <div class="social-icons">
+              <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                <img src="./Imagenes/tik-tok.png" alt="TikTok">
+              </a>
+              <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <img src="./Imagenes/facebook.png" alt="Facebook">
+              </a>
+              <a href="https://wa.me" target="_blank" aria-label="WhatsApp">
+                <img src="./Imagenes/whatsapp.png" alt="WhatsApp">
+              </a>
+              <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <img src="./Imagenes/instagram.png" alt="Instagram">
+              </a>
+            </div>
+          </div>
+      </footer>
+      <button id="botonCerrar" class="boton-cerrar" onclick="window.location.href='https://www.google.com'">Cerrar ventana</button>
+</body>
+</html>

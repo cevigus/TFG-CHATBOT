@@ -1,0 +1,43 @@
+h2{
+
+    color: #5D5FEF;
+    padding: 1%;
+    margin-left: 2%;
+}
+
+P{
+
+    margin-left: 3%;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+}
+
+.lista_enlaces{
+
+    padding: 5%;
+    margin-left: 10%;
+    width: 50%;
+}
+
+.lista_enlaces li{
+    padding: 2%;
+    color: #5D5FEF;
+    font-weight: bolder;
+}
+
+.contenido {
+
+    display: inline-flex;
+    width: 100%;
+}
+
+.imagen {
+
+    width: 40%;
+}
+
+a:visited{
+
+    color: #5D5FEF;
+     
+}

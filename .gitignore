@@ -1,0 +1,13 @@
+# Archivos sensibles
+.env
+credentials.json
+
+# Dependencias
+node_modules/
+
+# Archivos de logs
+*.log
+
+# Otros comunes
+.DS_Store
+

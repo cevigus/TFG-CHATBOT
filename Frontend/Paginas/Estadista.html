@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas - Ruleta de las Emociones</title>
+    <link rel="stylesheet" href="../Estilos/ccs_estadistica.css">
+    <link rel="icon" type="image/x-icon" href="../Imagenes/bot logo.ico">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Ruleta de las Emociones</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dashboard">
+            <div class="dashboard-header">
+                <h1>Estadísticas de Emociones</h1>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total de registros</h3>
+                    <div class="stat-value" id="total-records">0</div>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Emoción más frecuente</h3>
+                    <div class="stat-value" id="top-emotion">-</div>
+                    <div class="stat-change">
+                        <span id="top-emotion-percentage">0%</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Diversidad emocional</h3>
+                    <div class="stat-value" id="diversity-index">0</div>
+                    <div class="stat-change negative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                        </svg>
+                        <span id="diversity-change">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-chart">
+                <h3>Distribución de emociones</h3>
+                <div class="chart-container">
+                    <canvas id="emotionPieChart"></canvas>
+                </div>
+            </div>
+
+            <div class="emotions-list">
+                <h3>Detalle por emoción</h3>
+                <!-- Repite para cada emoción -->
+                <div class="emotion-item">
+                    <div class="emotion-info">
+                        <div class="emotion-color" style="background-color:#FFD700;"></div>
+                        <div class="emotion-name">Alegria</div>
+                    </div>
+                    <div class="emotion-stats">
+                        <div class="emotion-percentage" id="happy-percent">0%</div>
+                        <div class="emotion-bar">
+                            <div class="emotion-progress" id="happy-bar" style="width: 0%; background-color: #FFD700;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emotion-item">
+                    <div class="emotion-info">
+                        <div class="emotion-color" style="background-color: #1E90FF;"></div>
+                        <div class="emotion-name">Tristeza</div>
+                    </div>
+                    <div class="emotion-stats">
+                        <div class="emotion-percentage" id="sad-percent">0%</div>
+                        <div class="emotion-bar">
+                            <div class="emotion-progress" id="sad-bar" style="width: 0%; background-color: #1E90FF;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emotion-item">
+                    <div class="emotion-info">
+                        <div class="emotion-color" style="background-color: #FF4500;"></div>
+                        <div class="emotion-name">Ira</div>
+                    </div>
+                    <div class="emotion-stats">
+                        <div class="emotion-percentage" id="angry-percent">0%</div>
+                        <div class="emotion-bar">
+                            <div class="emotion-progress" id="angry-bar" style="width: 0%; background-color: #FF4500;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emotion-item">
+                    <div class="emotion-info">
+                        <div class="emotion-color" style="background-color: #800080;"></div>
+                        <div class="emotion-name">Miedo</div>
+                    </div>
+                    <div class="emotion-stats">
+                        <div class="emotion-percentage" id="fear-percent">0%</div>
+                        <div class="emotion-bar">
+                            <div class="emotion-progress" id="fear-bar" style="width: 0%; background-color: #800080;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emotion-item">
+                    <div class="emotion-info">
+                        <div class="emotion-color" style="background-color: #32CD32;"></div>
+                        <div class="emotion-name">Asco</div>
+                    </div>
+                    <div class="emotion-stats">
+                        <div class="emotion-percentage" id="disgust-percent">0%</div>
+                        <div class="emotion-bar">
+                            <div class="emotion-progress" id="disgust-bar" style="width: 0%; background-color: #32CD32;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="contenedor-estadisticas">
+    <div class="graficos">
+        <h2>Estadísticas por Género</h2>
+        <canvas id="graficoGenero"></canvas>
+
+        <h2>Estadísticas por Edad</h2>
+        <canvas id="graficoEdad"></canvas>
+    </div>
+    
+    <div class="texto-explicativo">
+        <h2>¿Por qué registramos estas estadísticas?</h2>
+        <p>Los datos recopilados nos permiten analizar patrones emocionales en diferentes grupos y edades. Esto ayuda a mejorar la interacción con la plataforma y ofrece una mejor comprensión sobre cómo las emociones varían según la edad y el género.</p>
+
+        <p>Además, estos datos pueden ser útiles para estudios psicológicos y mejorar experiencias personalizadas en el futuro.</p>
+    </div>
+</div>
+
+    <footer>
+        <p>© 2025 Ruleta de las Emociones. Todos los derechos reservados.</p>
+    </footer>
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const res = await fetch("http://localhost:3000/estadisticas");
+        const data = await res.json();
+
+        console.log("Datos recibidos del servidor:", data); // 👀 Depuración
+
+        if (!data.length) {
+            console.warn("No se recibieron datos de emociones.");
+            return;
+        }
+
+        const total = data.reduce((acc, curr) => acc + curr.cantidad, 0);
+
+
+        const labels = data.map(e => e.emotion);
+        const valores = data.map(e => e.porcentaje !== undefined ? parseFloat(e.porcentaje.toFixed(1)) : 0);
+
+
+        const colores = {
+            'alegria': '#FFD700',
+            'tristeza': '#1E90FF',
+            'ira': '#FF4500',
+            'miedo': '#800080',
+            'asco': '#32CD32'
+        };
+
+        const backgroundColors = labels.map(emocion => colores[emocion] || '#ccc');
+
+        const ctx = document.createElement('canvas');
+        document.querySelector('.chart-container').innerHTML = '';
+        document.querySelector('.chart-container').appendChild(ctx);
+
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: valores,
+                    backgroundColor: backgroundColors
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.label}: ${context.parsed.toFixed(1)}%`;
+                            }
+                        }
+                    }   
+                }
+            }
+        });
+
+
+    console.log("Elementos HTML para estadísticas:", {
+    totalRecords: document.getElementById('total-records'),
+    topEmotion: document.getElementById('top-emotion'),
+    diversityIndex: document.getElementById('diversity-index')
+});
+
+
+        // Actualizar los indicadores numéricos y barras
+        document.getElementById('total-records').textContent = total;
+
+        let topEmotion = { emotion: "-", porcentaje: 0 };
+        data.forEach(({ emotion, porcentaje }) => {
+            const idMap = {
+                'alegria': 'happy',
+                'tristeza': 'sad',
+                'ira': 'angry',
+                'miedo': 'fear',
+                'asco': 'disgust'
+            };
+
+            if (porcentaje > topEmotion.porcentaje) {
+                topEmotion = { emotion, porcentaje };
+            }
+
+            const id = idMap[emotion];
+            if (id) {
+                document.getElementById(`${id}-percent`).textContent = `${porcentaje.toFixed(1)}%`;
+                document.getElementById(`${id}-bar`).style.width = `${porcentaje.toFixed(1)}%`;
+            }
+        });
+
+        document.getElementById("top-emotion").textContent = topEmotion.emotion;
+        document.getElementById("top-emotion-percentage").textContent = `${topEmotion.porcentaje.toFixed(1)}% del total`;
+
+
+        // 🔢 Diversidad emocional = % de emociones detectadas sobre posibles
+        const emocionesDetectadas = data.map(e => e.emotion);
+        const emocionesPosibles = ["alegria", "tristeza", "ira", "miedo"];
+        const emocionesUnicas = new Set(emocionesDetectadas);
+        const diversidad = (emocionesUnicas.size / emocionesPosibles.length * 100).toFixed(0);
+
+        // Mostrar en el dashboard
+        document.getElementById("diversity-index").textContent = `${diversidad}%`;
+
+        document.getElementById("diversity-change").textContent = `${diversidad}% del total posible`; 
+
+
+
+    } catch (err) {
+        console.error("Error cargando estadísticas:", err);
+    }
+
+
+});
+</script>
+
+    <!-- Script para gráficas de género y edad -->
+    <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        const res = await fetch("http://localhost:3000/estadisticas-usuario");
+        const data = await res.json();
+
+
+        if (!data.generos?.length || !data.edades?.length) return;
+
+        const coloresEdad = ["#FFB347", "#FF5733", "#3498DB", "#2ECC71", "#9B59B6", "#F1C40F", "#E74C3C", "#8E44AD", "#2C3E50"];
+
+        console.log("Edades:", data.edades);
+        console.log("Colores asignados:", data.edades.map((_, i) => coloresEdad[i % coloresEdad.length]));
+        
+    
+    
+        const coloresGenero = {
+            "chico": "#007BFF",
+            "chica": "#FF69B4",
+            "prefiero no decirlo": "#28A745"
+        };
+
+        new Chart(document.getElementById("graficoGenero"), {
+    type: "bar",
+    data: {
+        labels: data.generos.map(g => g._id), // Ajusta aquí
+        datasets: [{
+            label: "Cantidad",
+            data: data.generos.map(g => g.cantidad), // Ajusta aquí
+            backgroundColor: data.generos.map(g => coloresGenero[g._id] || "#ccc")
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { display: false } }
+    }
+});
+
+    
+
+   new Chart(document.getElementById("graficoEdad"), {
+            type: "bar",
+            data: {
+                labels: data.edades.map(e => e._id),
+                datasets: [{
+                    label: "Cantidad",
+                    data: data.edades.map(e => e.cantidad),
+                    backgroundColor: data.edades.map((_, i) => coloresEdad[i % coloresEdad.length]) // ✅ Aquí ya está definida
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { display: false } }
+            }
+        });
+
+    } catch (error) {
+        console.error("Error cargando datos por género y edad:", error);
+    }
+});
+
+
+    </script>
+</body>
+</html>
