@@ -3,7 +3,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const { sendMessageToDialogflow } = require('./Backend/dialogflowClient'); // Asegúrate de tener este archivo configurado
 const mongoose = require('mongoose');
-require('dotenv').config();
+require('dotenv').config({ path: './Backend/.env' });
+
 
 
 
@@ -13,6 +14,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Conectar a MongoDB
+
+console.log("URI de MongoDB:", process.env.MONGODB_URI);
+
+
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
