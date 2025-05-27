@@ -128,5 +128,14 @@
                 </a>
               </div>
             </div>
+            <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
 
+            toggleButton.addEventListener('click', () => {
+              navMenu.classList.toggle('active');
+            });
+          });
+      </script>
 </body>
