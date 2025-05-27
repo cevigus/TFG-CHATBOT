@@ -39,6 +39,9 @@
         <div class="logo">
            <a href="index.html"><img src="./Imagenes/logo.jpg" alt="GGM"></a>    
         </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+          ☰
+        </button>
         
         <nav class="nav-menu" id="nav-menu">
           <ul>
@@ -135,5 +138,15 @@
           </div>
       </footer>
       <button id="botonCerrar" class="boton-cerrar" onclick="window.location.href='https://www.google.com'">Cerrar ventana</button>
+        <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                const toggleButton = document.getElementById('menu-toggle');
+                const navMenu = document.getElementById('nav-menu');
+            
+                toggleButton.addEventListener('click', () => {
+                  navMenu.classList.toggle('active');
+                });
+              });
+        </script>
 </body>
 </html>
