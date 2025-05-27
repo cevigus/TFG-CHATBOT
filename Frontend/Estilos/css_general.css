@@ -277,6 +277,7 @@ footer .help-icon:hover {
     right: 0;
     background-color: #a0c4ff;
     display: none;
+    border-radius: 15%;
   }
 
   .nav-menu ul {
