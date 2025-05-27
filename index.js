@@ -220,10 +220,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'Frontend', 'index.html'));
 });
 
-// (Opcional) Catch-all para cualquier otra ruta, si fuera una SPA:
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'Frontend', 'index.html'));
-});
 
 
 // Iniciar el servidor
