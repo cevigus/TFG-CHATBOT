@@ -211,10 +211,10 @@ const edadStats = await Usuario.aggregate([
 
 
 // Servir frontend estático desde la carpeta Frontend
-const path = require('path'); // Necesario para construir rutas correctas
+/*const path = require('path'); // Necesario para construir rutas correctas
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'Frontend', 'index.html'));
-});
+});*/
 
 
 
