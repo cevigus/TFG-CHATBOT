@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { sendMessageToDialogflow } = require('./Backend/dialogflowClient'); // Asegúrate de tener este archivo configurado
@@ -210,12 +211,19 @@ const edadStats = await Usuario.aggregate([
 });
 
 
-// Servir frontend estático desde la carpeta Frontend
-/*const path = require('path'); // Necesario para construir rutas correctas
+// 6. Rutas para servir archivos estáticos (Frontend)
+// Primero configuramos la carpeta estática:
+app.use(express.static(path.join(__dirname, 'Frontend')));
+
+// Luego definimos la ruta específica para la raíz:
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'Frontend', 'index.html'));
+});
+
+// (Opcional) Catch-all para cualquier otra ruta, si fuera una SPA:
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'Frontend', 'index.html'));
-});*/
-
+});
 
 
 // Iniciar el servidor
