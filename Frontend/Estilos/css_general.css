@@ -254,4 +254,38 @@ footer .help-icon:hover {
   z-index: 999;
   display: block;
 }
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #2B2D42;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #a0c4ff;
+    display: none;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
  
