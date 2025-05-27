@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path'); // Necesario para construir rutas correctas
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { sendMessageToDialogflow } = require('./Backend/dialogflowClient'); // Asegúrate de tener este archivo configurado
@@ -179,24 +180,7 @@ app.post('/estadisticas-usuario', async (req, res) => {
   }
 });
 
-//Endpoint usuario 
-app.post('/estadisticas-usuario', async (req, res) => {
-  try {
-    const { genero, edad } = req.body;
 
-    if (!genero || !edad) {
-      return res.status(400).json({ error: "Faltan datos" });
-    }
-
-    const nuevoUsuario = new Usuario({ genero, edad });
-    await nuevoUsuario.save();
-
-    res.json({ mensaje: "Datos guardados correctamente" });
-  } catch (err) {
-    console.error("Error guardando usuario:", err);
-    res.status(500).json({ error: "Error al guardar datos" });
-  }
-});
 
 //Endpoint usuario anonimo
 app.get('/estadisticas-usuario', async (req, res) => {
@@ -226,6 +210,7 @@ const edadStats = await Usuario.aggregate([
   }
 });
 
+
 // Servir frontend estático desde la carpeta Frontend
 const path = require('path');
 app.use(express.static(path.join(__dirname, 'Frontend')));
@@ -234,13 +219,11 @@ app.get('*', (req, res) => {
 });
 
 
-
 // Iniciar el servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor iniciado en el puerto ${PORT}`);
 });
-
 
 
 
