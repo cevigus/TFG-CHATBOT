@@ -226,6 +226,12 @@ const edadStats = await Usuario.aggregate([
   }
 });
 
+// Servir frontend estático desde la carpeta Frontend
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'Frontend')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'Frontend', 'index.html'));
+});
 
 
 

@@ -150,7 +150,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const res = await fetch("http://localhost:3000/estadisticas");
+        const res = await fetch("/estadisticas");
         const data = await res.json();
 
         console.log("Datos recibidos del servidor:", data); // 👀 Depuración
@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     <script>
     document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const res = await fetch("http://localhost:3000/estadisticas-usuario");
+        const res = await fetch("/estadisticas-usuario");
         const data = await res.json();
 
 
