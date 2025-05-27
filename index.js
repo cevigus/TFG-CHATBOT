@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path'); // Necesario para construir rutas correctas
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { sendMessageToDialogflow } = require('./Backend/dialogflowClient'); // Asegúrate de tener este archivo configurado
@@ -212,6 +211,7 @@ const edadStats = await Usuario.aggregate([
 
 
 // Servir frontend estático desde la carpeta Frontend
+const path = require('path'); // Necesario para construir rutas correctas
 app.use(express.static(path.join(__dirname, 'Frontend')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'Frontend', 'index.html'));
