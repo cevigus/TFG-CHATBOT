@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatBot</title>
+    <title>Sobre Nosotros</title>
     <link rel="stylesheet" href="../Estilos/css_general.css" type="text/css">
     <link rel="stylesheet" href="../Estilos/css_nosotros.css" type="text/css">
-    <link rel="icon" type="image/x-icon" href="../Imagenes/imagen.png">
+    <link rel="stylesheet" href="../Estilos/css_index.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_popup.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_sublista_general.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="../Imagenes/bot logo.ico">
+    <script src="../Scripts/popup.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,125 +21,170 @@
            <a href="../index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
         </div>
         <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-          ☰
+          <div class="hamburger-lines">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="menu-text">Menú</span>
         </button>
-        
         <nav class="nav-menu" id="nav-menu">
+          <button id="close-menu" class="close-menu" aria-label="Cerrar menú" style="display:none">&times;</button>
           <ul>
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./bullying.html">Bullying</a>
+            <li><a href="bullying.html">Bullying</a>
                 <ul class="sublista" id="desplegable">
-                  <li><a href="./que_es_bullying.html">Qué es</a></li>
-                  <li><a href="./como_se_produce.html">Cómo se produce</a></li>
-                  <li><a href="./cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
-                  <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
-                  <li><a href="./consecuencias.html">Consecuencias</a></li>
+                  <li><a href="que_es_bullying.html">Qué es</a></li>
+                  <li><a href="como_se_produce.html">Cómo se produce</a></li>
+                  <li><a href="cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
+                  <li><a href="perfiles_implicados.html">Perfiles implicados</a></li>
+                  <li><a href="consecuencias.html">Consecuencias</a></li>
               </ul>
             </li>
-            <li><a href="../Paginas/chatbot.html">Chat</a></li>
-            <li><a href="../Paginas/ayuda.html">Ayuda</a></li>
-            <li><a href="../Paginas/sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="chatbot.html">Chat</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
           </ul>
-        </nav>
+        </nav>  
+        <div class="header-slogan-box">
+          <svg class="slogan-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" style="vertical-align: middle; margin-right: 10px;"><path d="M12 2L4 5v6c0 5.25 3.75 10 8 11 4.25-1 8-5.75 8-11V5l-8-3z" fill="#5D5FEF"/><path d="M12 2v19c4.25-1 8-5.75 8-11V5l-8-3z" fill="#A077FF" fill-opacity="0.5"/></svg>
+          <span class="header-slogan">Un clic, una charla, un cambio</span>
+        </div>
     </header>
 
-    <main class="sobre-nosotros">
-        <!-- Introducción -->
-        <section class="intro">
-          <h2 class="somos">Quiénes somos</h2>
-          <p>Somos un grupo diverso de profesionales apasionados por hacer frente al bullying, usando la tecnología, la empatía y el apoyo constante. Nuestra plataforma es un refugio seguro donde cualquier persona, sin importar su situación, puede compartir sus sentimientos, obtener información útil y sentirse acompañada en todo momento. Juntos, creamos un entorno en el que la escucha activa y el respeto son la base de todo.
-        </section>
-      
-        <!-- Valores -->
-        <section class="valores">
-          <h2>Nuestros valores</h2>
-          <div class="valores-grid">
-            <div class="valor">
-              <img src="../Imagenes/empatia.png" alt="Empatía" class="empatia">
-              <h3>Empatía</h3>
-              <p>Creemos en la escucha activa y el acompañamiento emocional en todo momento.</p>
+    <main>
+      <!-- Sección principal: Quiénes somos -->
+      <section class="quienes-somos-hero">
+        <div class="quienes-somos-card mejorada">
+          <h2 class="titulo-quienes-somos">¿Quiénes somos?</h2>
+          <div class="separador"></div>
+          <h3 class="subtitulo-quienes-somos">Innovación, empatía y compromiso social</h3>
+          <p class="quienes-somos-texto">
+            Somos un grupo diverso de profesionales apasionados por hacer frente al bullying, usando la tecnología, la empatía y el apoyo constante. Nuestra plataforma es un refugio seguro donde cualquier persona, sin importar su situación, puede compartir sus sentimientos, obtener información útil y sentirse acompañada en todo momento. Juntos, creamos un entorno en el que la escucha activa y el respeto son la base de todo.
+          </p>
+        </div>
+      </section>
+      <!-- Sección de valores -->
+      <section class="valores">
+        <h2>Nuestros valores</h2>
+        <div class="valores-grid">
+          <div class="valor">
+            <img src="../Imagenes/empatia.png" alt="Empatía" class="empatia">
+            <h3>Empatía</h3>
+            <p>Creemos en la escucha activa y el acompañamiento emocional en todo momento.</p>
+          </div>
+          <div class="valor">
+            <img src="../Imagenes/seguridad.png" alt="Seguridad" class="seguridad">
+            <h3>Seguridad</h3>
+            <p>Garantizamos un entorno digital seguro, sin juicios ni exposición.</p>
+          </div>
+          <div class="valor">
+            <img src="../Imagenes/innovacion.png" alt="Innovación" class="innovacion">
+            <h3>Innovación</h3>
+            <p>Utilizamos la inteligencia artificial y el diseño ético como herramientas de cambio.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Sección de equipo -->
+      <section class="equipo">
+        <h2>Conoce al equipo</h2>
+        <div class="equipo-grid">
+          <div class="card card-flip">
+            <div class="card-front">
+              <div class="equipo-emoji">🧑‍⚕️</div>
+              <h3>Víctor García</h3>
+              <p>Psicólogo juvenil</p>
             </div>
-            <div class="valor">
-              <img src="../Imagenes/seguridad.png" alt="Seguridad" class="seguridad">
-              <h3>Seguridad</h3>
-              <p>Garantizamos un entorno digital seguro, sin juicios ni exposición.</p>
-            </div>
-            <div class="valor">
-              <img src="../Imagenes/innovacion.png" alt="Innovación" class="innovacion">
-              <h3>Innovación</h3>
-              <p>Utilizamos la inteligencia artificial y el diseño ético como herramientas de cambio.</p>
+            <div class="card-back">
+              <p>Da alma al chatbot y cuida el enfoque emocional de la web.</p>
             </div>
           </div>
-        </section>
-      
-        <!-- Equipo -->
-        <section class="equipo">
-            <h2>Conoce al equipo</h2>
-            <div class="equipo-grid">
-              <div class="card">
-                <img src="img/miembro1.jpg" alt="Víctor García" />
-                <h3>Víctor García</h3>
-                <p>Psicólogo juvenil. Da alma al chatbot y cuida el enfoque emocional de la web.</p>
-              </div>
-              <div class="card">
-                <img src="img/miembro2.jpg" alt="César Castillo" />
-                <h3>César Castillo</h3>
-                <p>Programador web. Garantiza accesibilidad, estabilidad y que todo funcione genial.</p>
-              </div>
-              <div class="card">
-                <img src="img/miembro3.jpg" alt="Miguel Gustavo" />
-                <h3>Miguel Gustavo</h3>
-                <p>Diseñador UX. Creador de la estética amigable y la experiencia del usuario.</p>
-              </div>
+          <div class="card card-flip">
+            <div class="card-front">
+              <div class="equipo-emoji">💻</div>
+              <h3>César Castillo</h3>
+              <p>Programador web</p>
             </div>
-          </section>
-      
-          <footer>
-            <div class="footer-links">
-                <a href="../index.html">Inicio</a>
-                <a href="./ayuda.html">Ayuda</a>
-                <a href="./chatbot.html">Chatbot</a>
-                <a href="./sobre_nosotros.html">Contacto</a>
+            <div class="card-back">
+              <p>Garantiza accesibilidad, estabilidad y que todo funcione genial.</p>
             </div>
-            <div class="help-resources">
-              <a href="https://aepae.es/" target="_blank">
-                <img src="../Imagenes/AEPAEEE.png" alt="Fundación AEPAE" class="help-icon">
-              </a>
-              <a href="https://www.anar.org/" target="_blank">
-                <img src="../Imagenes/ANAR.png" alt="Fundación ANAR" class="help-icon">
-              </a>
-              <a href="https://fundacioncolacao.org/directorio" target="_blank">
-                <img src="../Imagenes/colacao.png" alt="Fundación colacao" class="help-icon">
-              </a>
+          </div>
+          <div class="card card-flip">
+            <div class="card-front">
+              <div class="equipo-emoji">🎨</div>
+              <h3>Miguel Gustavo</h3>
+              <p>Diseñador UX</p>
             </div>
-            <div class="footer-info">
-              <h4>&copy; 2025 Página contra el Bullying. Todos los derechos reservados.</h4>
-              <h4>Para más información, contacta con nosotros.</h4>
+            <div class="card-back">
+              <p>Creador de la estética amigable y la experiencia del usuario.</p>
             </div>
-            <div class="footer-content">
-              <div class="social-icons">
-                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-                  <img src="../Imagenes/tik-tok.png" alt="TikTok">
-                </a>
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                  <img src="../Imagenes/facebook.png" alt="Facebook">
-                </a>
-                <a href="https://wa.me" target="_blank" aria-label="WhatsApp">
-                  <img src="../Imagenes/whatsapp.png" alt="WhatsApp">
-                </a>
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                  <img src="../Imagenes/instagram.png" alt="Instagram">
-                </a>
-              </div>
-            </div>
-            <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
+          </div>
+        </div>
+      </section>
+    </main>
 
-            toggleButton.addEventListener('click', () => {
-              navMenu.classList.toggle('active');
-            });
-          });
-      </script>
+    <footer>
+      <div class="footer-links">
+        <a href="../index.html">Inicio</a>
+        <a href="./ayuda.html">Ayuda</a>
+        <a href="./chatbot.html">Chatbot</a>
+        <a href="./sobre_nosotros.html">Contacto</a>
+      </div>
+      <div class="help-resources">
+        <a href="https://aepae.es/" target="_blank">
+          <img src="../Imagenes/AEPAEEE.png" alt="Fundación AEPAE" class="help-icon">
+        </a>
+        <a href="https://www.anar.org/" target="_blank">
+          <img src="../Imagenes/ANAR.png" alt="Fundación ANAR" class="help-icon">
+        </a>
+        <a href="https://fundacioncolacao.org/directorio" target="_blank">
+          <img src="../Imagenes/colacao.png" alt="Fundación colacao" class="help-icon">
+        </a>
+      </div>
+      <div class="footer-info">
+        <h4>&copy; 2025 Página contra el Bullying. Todos los derechos reservados.</h4>
+        <h4>Para más información, contacta con nosotros.</h4>
+      </div>
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <img src="../Imagenes/tik-tok.png" alt="TikTok">
+          </a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <img src="../Imagenes/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://wa.me" target="_blank" aria-label="WhatsApp">
+            <img src="../Imagenes/whatsapp.png" alt="WhatsApp">
+          </a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <img src="../Imagenes/instagram.png" alt="Instagram">
+          </a>
+        </div>
+      </div>
+    </footer>
+    <button id="botonCerrar" class="boton-cerrar" onclick="window.location.href='https://www.google.com'">Cerrar ventana</button>
+
+    <script>
+      // Menú hamburguesa responsive
+      const menuToggle = document.getElementById('menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      const closeMenu = document.getElementById('close-menu');
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        if (navMenu.classList.contains('active')) {
+          closeMenu.style.display = 'block';
+          menuToggle.classList.add('disabled');
+        } else {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }
+      });
+      closeMenu.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        setTimeout(() => {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }, 520);
+      });
+    </script>
 </body>

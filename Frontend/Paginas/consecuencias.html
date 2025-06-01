@@ -1,169 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfiles implicados</title>
+    <title>Consecuencias del Bullying</title>
     <link rel="stylesheet" href="../Estilos/css_general.css" type="text/css">
     <link rel="stylesheet" href="../Estilos/css_consecuencias.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_index.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_popup.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="../Imagenes/bot logo.ico">
+    <script src="../Scripts/popup.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
-    
     <header class="main-header">
         <div class="logo">
-           <a href="index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
+           <a href="../index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
         </div>
         <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-          ☰
+          <div class="hamburger-lines">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="menu-text">Menú</span>
         </button>
         <nav class="nav-menu" id="nav-menu">
+          <button id="close-menu" class="close-menu" aria-label="Cerrar menú" style="display:none">&times;</button>
           <ul>
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./bullying.html">Bullying</a>
+            <li><a href="bullying.html">Bullying</a>
                 <ul class="sublista" id="desplegable">
-                  <li><a href="./que_es_bullying.html">Qué es</a></li>
-                  <li><a href="./como_se_produce.html">Cómo se produce</a></li>
-                  <li><a href="./cuando_ocurre _y_por que.html">Cúado ocurre y por qué</a></li>
-                  <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
-                  <li><a href="./consecuencias.html">Consecuencias</a></li>
+                  <li><a href="que_es_bullying.html">Qué es</a></li>
+                  <li><a href="como_se_produce.html">Cómo se produce</a></li>
+                  <li><a href="cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
+                  <li><a href="perfiles_implicados.html">Perfiles implicados</a></li>
+                  <li><a href="consecuencias.html">Consecuencias</a></li>
               </ul>
             </li>
-            <li><a href="./chatbot.html">Chat</a></li>
-            <li><a href="./ayuda.html">Ayuda</a></li>
-            <li><a href="./sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="chatbot.html">Chat</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
           </ul>
         </nav>  
+        <div class="header-slogan-box">
+          <svg class="slogan-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" style="vertical-align: middle; margin-right: 10px;"><path d="M12 2L4 5v6c0 5.25 3.75 10 8 11 4.25-1 8-5.75 8-11V5l-8-3z" fill="#5D5FEF"/><path d="M12 2v19c4.25-1 8-5.75 8-11V5l-8-3z" fill="#A077FF" fill-opacity="0.5"/></svg>
+          <span class="header-slogan">Un clic, una charla, un cambio</span>
+        </div>
     </header>
-
-    <main>
-      
-      <div class="contenido">
-          <ul class="lista_enlaces">
-            <li><a href="./que_es_bullying.html">Qué es</a></li>
-            <li><a href="./como_se_produce.html">Cómo se produce</a></li>
-            <li><a href="./cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
-            <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
-            <li><a href="./consecuencias.html">Consecuencias</a></li>
-        </ul>
-      
-      <div class="texto">
-      <h2>Las huellas del bullying</h2>
-        <p>
-            El bullying tiene consecuencias graves tanto para la víctima como para el agresor y los espectadores.
-            Sus efectos pueden durar años y afectar todos los aspectos de la vida de una persona.
+    <main class="main-content" aria-label="Contenido principal">
+      <section class="hero-section enhanced-hero" aria-labelledby="titulo-consecuencias">
+        <div class="hero-bg-svg" aria-hidden="true"></div>
+        <h1 class="hero-title" id="titulo-consecuencias">Las huellas del bullying</h1>
+        <p class="intro-text enhanced-intro">
+            El bullying deja cicatrices profundas en todos los involucrados. Sus efectos pueden durar años y afectar todos los aspectos de la vida. Descubre cómo impacta a cada perfil y cómo podemos cambiar esta realidad.
         </p>
-        <img src="../Imagenes/consecuencias.png" alt="consecuencias">
-      </div>
-    </div>
-
-
-     <div class="consecuencias">
-      <article class="agresor">
-         <h2>Agresor</h2>
-          <p>
-            <ul>
-                <li>
-                    Dificultad para seguir normas y límites.
-                </li>
-                <li>
-                    Mayor riesgo de conductas delictivas en la adolescencia/adultez.
-                </li>
-                <li>
-                    Problemas de convivencia en la escuela y fuera de ella.
-                </li>
-                <li>
-                    Baja empatía y posibles trastornos de conducta.
-                </li>
-            </ul>
-          </p>
-      </article>
-     
-      <article class="victima">
-          <h2>Víctima</h2>
-            <p>
-            <ul>
-                <li>
-                    Psicológicas: baja autoestima, ansiedad, depresión, trastornos del sueño, ideación suicida.
-                </li>
-                <li>
-                    Físicas: dolores de cabeza, problemas digestivos, fatiga, autolesiones.
-                </li>
-                <li>
-                     Sociales: aislamiento, dificultad para confiar en los demás, problemas para hacer amigos.
-                </li>
-                <li>
-                    Académicas: disminución del rendimiento escolar, abandono escolar.
-                </li>
-            </ul>
-            </p>
-      </article>
-      <article class="espectador">
-        <h2>Espectadores</h2>
-        <p>
-            <ul>
-                <li>
-                    Sentimientos de culpa por no intervenir.
-                </li>
-                <li>
-                    Miedo a convertirse en la próxima víctima.
-                </li>
-                <li>
-                    Normalización de la violencia como forma de resolver conflictos.
-                </li>
-            </ul>
-        </p>
-      </article>
-    </div>
-
-     <footer>
-        <div class="footer-links">
-          <a href="../index.html">Inicio</a>
-          <a href="./ayuda.html">Ayuda</a>
-          <a href="./chatbot.html">Chatbot</a>
-          <a href="./sobre_nosotros.html">Contacto</a>
+        <div class="img-consecuencias enhanced-img">
+          <img src="../Imagenes/consecuencias.png" alt="Ilustración de las consecuencias del bullying en diferentes perfiles" loading="lazy">
         </div>
-        <div class="help-resources">
-          <a href="https://aepae.es/" target="_blank">
-            <img src="../Imagenes/AEPAEEE.png" alt="Fundación AEPAE" class="help-icon">
-          </a>
-          <a href="https://www.anar.org/" target="_blank">
-            <img src="../Imagenes/ANAR.png" alt="Fundación ANAR" class="help-icon">
-          </a>
-          <a href="https://fundacioncolacao.org/directorio" target="_blank">
-            <img src="../Imagenes/colacao.png" alt="Fundación colacao" class="help-icon">
-          </a>
-        </div>
-        <div class="footer-info">
-          <h4>&copy; 2025 Página contra el Bullying. Todos los derechos reservados.</h4>
-          <h4>Para más información, contacta con nosotros.</h4>
-        </div>
-        <div class="footer-content">
-            <div class="social-icons">
-              <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-                <img src="../Imagenes/tik-tok.png" alt="TikTok">
-              </a>
-              <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                <img src="../Imagenes/facebook.png" alt="Facebook">
-              </a>
-              <a href="https://wa.me" target="_blank" aria-label="WhatsApp">
-                <img src="../Imagenes/whatsapp.png" alt="WhatsApp">
-              </a>
-              <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                <img src="../Imagenes/instagram.png" alt="Instagram">
-              </a>
-            </div>
+      </section>
+      <hr class="section-divider" aria-hidden="true">
+      <section class="consecuencias-grid enhanced-grid" aria-label="Consecuencias del bullying">
+        <article class="con-card agresor enhanced-card" tabindex="0" aria-labelledby="titulo-agresor">
+          <div class="icon-box enhanced-icon" aria-hidden="true">
+            <!-- Ícono SVG Agresor -->
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#A077FF"/><path d="M8 16c0-2.21 1.79-4 4-4s4 1.79 4 4" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="10" r="1.5" fill="#fff"/><circle cx="14" cy="10" r="1.5" fill="#fff"/></svg>
           </div>
-      </footer>
-      <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
-
-            toggleButton.addEventListener('click', () => {
-              navMenu.classList.toggle('active');
-            });
-          });
-      </script>
+          <h2 id="titulo-agresor">Agresor</h2>
+          <h3 class="subtitle">Riesgos y consecuencias personales</h3>
+          <ul>
+            <li>Dificultad para respetar normas y límites sociales.</li>
+            <li>Mayor probabilidad de desarrollar conductas antisociales o delictivas en la adolescencia y adultez.</li>
+            <li>Problemas de convivencia y relaciones interpersonales conflictivas.</li>
+            <li>Baja empatía y riesgo de trastornos de conducta.</li>
+          </ul>
+        </article>
+        <article class="con-card victima enhanced-card" tabindex="0" aria-labelledby="titulo-victima">
+          <div class="icon-box enhanced-icon" aria-hidden="true">
+            <!-- Ícono SVG Víctima -->
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#5D5FEF"/><path d="M8 16c0-2.21 1.79-4 4-4s4 1.79 4 4" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="10" r="2" fill="#fff"/></svg>
+          </div>
+          <h2 id="titulo-victima">Víctima</h2>
+          <h3 class="subtitle">Impacto psicológico, físico, social y académico</h3>
+          <ul>
+            <li><strong>Psicológico:</strong> baja autoestima, ansiedad, depresión, trastornos del sueño, ideación suicida.</li>
+            <li><strong>Físico:</strong> dolores de cabeza, problemas digestivos, fatiga, autolesiones.</li>
+            <li><strong>Social:</strong> aislamiento, dificultad para confiar en los demás, problemas para hacer amigos.</li>
+            <li><strong>Académico:</strong> disminución del rendimiento escolar, absentismo o abandono escolar.</li>
+          </ul>
+        </article>
+        <article class="con-card espectador enhanced-card" tabindex="0" aria-labelledby="titulo-espectador">
+          <div class="icon-box enhanced-icon" aria-hidden="true">
+            <!-- Ícono SVG Espectador -->
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#8ecae6"/><path d="M8 16c0-2.21 1.79-4 4-4s4 1.79 4 4" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="9.5" cy="10" r="1" fill="#fff"/><circle cx="14.5" cy="10" r="1" fill="#fff"/></svg>
+          </div>
+          <h2 id="titulo-espectador">Espectadores</h2>
+          <h3 class="subtitle">Efectos en el entorno y en sí mismos</h3>
+          <ul>
+            <li>Sentimientos de culpa o impotencia por no intervenir.</li>
+            <li>Miedo a convertirse en la próxima víctima.</li>
+            <li>Normalización de la violencia como forma de resolver conflictos.</li>
+            <li>Desarrollo de actitudes pasivas ante la injusticia.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-links">
+        <a href="../index.html">Inicio</a>
+        <a href="./ayuda.html">Ayuda</a>
+        <a href="./chatbot.html">Chatbot</a>
+        <a href="./sobre_nosotros.html">Contacto</a>
+      </div>
+      <div class="help-resources">
+        <a href="https://aepae.es/" target="_blank">
+          <img src="../Imagenes/AEPAEEE.png" alt="Fundación AEPAE" class="help-icon">
+        </a>
+        <a href="https://www.anar.org/" target="_blank">
+          <img src="../Imagenes/ANAR.png" alt="Fundación ANAR" class="help-icon">
+        </a>
+        <a href="https://fundacioncolacao.org/directorio" target="_blank">
+          <img src="../Imagenes/colacao.png" alt="Fundación colacao" class="help-icon">
+        </a>
+      </div>
+      <div class="footer-info">
+        <h4>&copy; 2025 Página contra el Bullying. Todos los derechos reservados.</h4>
+        <h4>Para más información, contacta con nosotros.</h4>
+      </div>
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <img src="../Imagenes/tik-tok.png" alt="TikTok">
+          </a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <img src="../Imagenes/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://wa.me" target="_blank" aria-label="WhatsApp">
+            <img src="../Imagenes/whatsapp.png" alt="WhatsApp">
+          </a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <img src="../Imagenes/instagram.png" alt="Instagram">
+          </a>
+        </div>
+      </div>
+    </footer>
+    <button id="botonCerrar" class="boton-cerrar" onclick="window.location.href='https://www.google.com'">Cerrar ventana</button>
 </body>
+<script>
+     // Menú hamburguesa responsive
+     const menuToggle = document.getElementById('menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      const closeMenu = document.getElementById('close-menu');
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        if (navMenu.classList.contains('active')) {
+          closeMenu.style.display = 'block';
+          menuToggle.classList.add('disabled');
+        } else {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }
+      });
+      closeMenu.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        setTimeout(() => {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }, 520);
+      });
+</script>
 </html>

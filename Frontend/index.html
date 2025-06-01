@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatBot</title>
-    <link rel="stylesheet" href="./Estilos/css_general.css" type="text/css">
-    <link rel="stylesheet" href="./Estilos/css_index.css" type="text/css">
-    <link rel="stylesheet" href="./Estilos/css_popup.css" type="text/css">
-    <link rel="stylesheet" href="./Frontend/Estilos/css_sublista_general.css" type="text/css">
+    <link rel="stylesheet" href="../Frontend/Estilos/css_general.css" type="text/css">
+    <link rel="stylesheet" href="../Frontend/Estilos/css_index.css" type="text/css">
+    <link rel="stylesheet" href="../Frontend/Estilos/css_popup.css" type="text/css">
+    <link rel="stylesheet" href="../Frontend/Estilos/css_sublista_general.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="./Imagenes/bot logo.ico">
-    <script src="./Scripts/popup.js"></script>
+    <script src="../Frontend/Scripts/popup.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
 </head>
 
 <!--Popup-->
@@ -37,13 +38,16 @@
 <body>
     <header class="main-header">
         <div class="logo">
-           <a href="index.html"><img src="./Imagenes/logo.jpg" alt="GGM"></a>    
+           <a href="index.html"><img src="../Frontend/Imagenes/logo.jpg" alt="GGM"></a>    
         </div>
         <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-          ☰
+          <div class="hamburger-lines">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="menu-text">Menú</span>
         </button>
-        
         <nav class="nav-menu" id="nav-menu">
+          <button id="close-menu" class="close-menu" aria-label="Cerrar menú" style="display:none">&times;</button>
           <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="./Paginas/bullying.html">Bullying</a>
@@ -60,44 +64,100 @@
             <li><a href="./Paginas/sobre_nosotros.html">Sobre Nosotros</a></li>
           </ul>
         </nav>  
+        <div class="header-slogan-box">
+          <svg class="slogan-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" style="vertical-align: middle; margin-right: 10px;"><path d="M12 2L4 5v6c0 5.25 3.75 10 8 11 4.25-1 8-5.75 8-11V5l-8-3z" fill="#5D5FEF"/><path d="M12 2v19c4.25-1 8-5.75 8-11V5l-8-3z" fill="#A077FF" fill-opacity="0.5"/></svg>
+          <span class="header-slogan">Un clic, una charla, un cambio</span>
+        </div>
     </header>
     <main> 
       <section class="intro" id="inicio">
           <div class="intro-texto">
             <h2>Bienvenid@ a nuestra plataforma</h2>
             <p>Esta página nace con el propósito de crear conciencia, apoyar y proporcionar herramientas a quienes sufren o conocen casos de bullying. Todos merecen un entorno seguro y respetuoso.</p>
+            <div class="intro-img solo-movil">
+              <img src="Imagenes/niños_abrazados.jpg" alt="Niños abrazándose, símbolo de apoyo y amistad">
+            </div>
+            <div class="intro-quote">
+              <blockquote>"El primer paso para erradicar el bullying es hablar de ello. Juntos, podemos marcar la diferencia."</blockquote>
+              <cite>- Equipo GGM</cite>
+            </div>
           </div>
-          <div class="intro-img">
-            <img src="Imagenes/niños_abrazados.jpg" alt="Niños abrazándose">
+          <div class="intro-img solo-desktop">
+            <img src="Imagenes/niños_abrazados.jpg" alt="Niños abrazándose, símbolo de apoyo y amistad">
           </div>
         </section>
     
-        <section class="info" id="que-es">
-          <div class="info-img izquierda">
-            <img src="Imagenes/stop_bullying.png" alt="Ilustración de bullying escolar">
+        <section class="info info-bullying" id="que-es">
+          <div class="info-img izquierda solo-desktop">
+            <img src="Imagenes/stop_bullying.png" alt="Ilustración de bullying escolar, niño siendo apoyado">
           </div>
           <div class="info-texto">
             <h2>¿Qué es el bullying?</h2>
             <p>El bullying es un comportamiento agresivo, repetido y desequilibrado entre escolares. Puede ser físico, verbal o emocional. Reconocerlo es el primer paso para erradicarlo.</p>
+            <div class="info-img izquierda solo-movil">
+              <img src="Imagenes/stop_bullying.png" alt="Ilustración de bullying escolar, niño siendo apoyado">
+            </div>
+            <ul class="bullying-tipos">
+              <li><strong>Físico:</strong> Golpes, empujones, daños materiales.</li>
+              <li><strong>Verbal:</strong> Insultos, amenazas, burlas.</li>
+              <li><strong>Social:</strong> Exclusión, rumores, aislamiento.</li>
+              <li><strong>Cibernético:</strong> Acoso a través de redes sociales o mensajes.</li>
+            </ul>
           </div>
         </section>
     
-        <section class="info" id="combatir">
+        <section class="info info-combatir" id="combatir">
           <div class="info-texto">
             <h2>¿Cómo podemos combatirlo?</h2>
             <p>Con educación, apoyo emocional, intervención rápida y canales de comunicación seguros. Nuestra plataforma te conecta con recursos, personas y ayuda profesional.</p>
+            <div class="info-img derecha solo-movil">
+              <img src="Imagenes/manos_unidas.avif" alt="Manos unidas en señal de ayuda y solidaridad">
+            </div>
+            <div class="combatir-tips">
+              <h3>Recomendaciones:</h3>
+              <ul>
+                <li>Habla con un adulto de confianza.</li>
+                <li>No respondas a las provocaciones.</li>
+                <li>Apoya a quienes lo sufren, no seas espectador pasivo.</li>
+                <li>Utiliza los recursos de ayuda disponibles.</li>
+              </ul>
+            </div>
           </div>
-          <div class="info-img derecha">
-            <img src="Imagenes/manos_unidas.avif" alt="Manos unidas en señal de ayuda">
+          <div class="info-img derecha solo-desktop">
+            <img src="Imagenes/manos_unidas.avif" alt="Manos unidas en señal de ayuda y solidaridad">
           </div>
         </section>
     
         <section class="info nosotros" id="nosotros">
-          <h2>¿Quiénes somos?</h2>
-          <p>Un equipo comprometido con la lucha contra el bullying en los centros escolares. Colaboramos con fundaciones y profesionales para darte un espacio seguro y útil.</p>
+          <div class="nosotros-card">
+            <div class="nosotros-info">
+              <h2>¿Quiénes somos? <span style="font-size:1.2em;vertical-align:middle;">🤝</span></h2>
+              <p>Somos un equipo multidisciplinario apasionado por crear entornos escolares seguros y libres de acoso. Nuestra misión es acompañar, informar y conectar a quienes sufren o presencian bullying, colaborando con fundaciones y profesionales para ofrecerte un espacio de apoyo y recursos útiles. Creemos en la empatía, la escucha activa y la acción conjunta para lograr un cambio real.</p>
+            </div>
+            <div class="nosotros-form">
+              <div class="contacto-box">
+                <h3>¿Quieres ponerte en contacto con nosotros?</h3>
+                <form class="form-contacto" autocomplete="off">
+                  <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                  </div>
+                  <div class="form-group">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="tucorreo@email.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                  </div>
+                  <button type="button" disabled style="opacity:0.7;cursor:not-allowed;">Enviar</button>
+                  <p class="form-aviso">Próximamente en funcionamiento.</p>
+                </form>
+              </div>
+            </div>
+          </div>
         </section>
-    
-      </main>
+    </main>
     <footer>
         <div class="footer-links">
           <a href="./index.html">Inicio</a>
@@ -138,15 +198,30 @@
           </div>
       </footer>
       <button id="botonCerrar" class="boton-cerrar" onclick="window.location.href='https://www.google.com'">Cerrar ventana</button>
-        <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                const toggleButton = document.getElementById('menu-toggle');
-                const navMenu = document.getElementById('nav-menu');
-            
-                toggleButton.addEventListener('click', () => {
-                  navMenu.classList.toggle('active');
-                });
-              });
-        </script>
+      <script>
+        // Menú hamburguesa responsive
+      const menuToggle = document.getElementById('menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      const closeMenu = document.getElementById('close-menu');
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        if (navMenu.classList.contains('active')) {
+          closeMenu.style.display = 'block';
+          menuToggle.classList.add('disabled');
+        } else {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }
+      });
+      closeMenu.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        setTimeout(() => {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }, 520);
+      });
+           </script>
 </body>
 </html>

@@ -6,92 +6,92 @@
     <title>Perfiles implicados</title>
     <link rel="stylesheet" href="../Estilos/css_general.css" type="text/css">
     <link rel="stylesheet" href="../Estilos/css_perfiles_implicados.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_index.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_popup.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_sublista_general.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="../Imagenes/bot logo.ico">
+    <script src="../Scripts/popup.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <header class="main-header">
         <div class="logo">
-           <a href="index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
+           <a href="../index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
         </div>
         <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-          ☰
+          <div class="hamburger-lines">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="menu-text">Menú</span>
         </button>
-        
         <nav class="nav-menu" id="nav-menu">
+          <button id="close-menu" class="close-menu" aria-label="Cerrar menú" style="display:none">&times;</button>
           <ul>
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./bullying.html">Bullying</a>
+            <li><a href="bullying.html">Bullying</a>
                 <ul class="sublista" id="desplegable">
-                  <li><a href="./que_es_bullying.html">Qué es</a></li>
-                  <li><a href="./como_se_produce.html">Cómo se produce</a></li>
-                  <li><a href="./cuando_ocurre _y_por que.html">Cúado ocurre y por qué</a></li>
-                  <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
-                  <li><a href="./consecuencias.html">Consecuencias</a></li>
+                  <li><a href="que_es_bullying.html">Qué es</a></li>
+                  <li><a href="como_se_produce.html">Cómo se produce</a></li>
+                  <li><a href="cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
+                  <li><a href="perfiles_implicados.html">Perfiles implicados</a></li>
+                  <li><a href="consecuencias.html">Consecuencias</a></li>
               </ul>
             </li>
-            <li><a href="./chatbot.html">Chat</a></li>
-            <li><a href="./ayuda.html">Ayuda</a></li>
-            <li><a href="./sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="chatbot.html">Chat</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
           </ul>
         </nav>  
+        <div class="header-slogan-box">
+          <svg class="slogan-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" style="vertical-align: middle; margin-right: 10px;"><path d="M12 2L4 5v6c0 5.25 3.75 10 8 11 4.25-1 8-5.75 8-11V5l-8-3z" fill="#5D5FEF"/><path d="M12 2v19c4.25-1 8-5.75 8-11V5l-8-3z" fill="#A077FF" fill-opacity="0.5"/></svg>
+          <span class="header-slogan">Un clic, una charla, un cambio</span>
+        </div>
     </header>
     <main>
-      
-      <div class="contenido">
-          <ul class="lista_enlaces">
-            <li><a href="./que_es_bullying.html">Qué es</a></li>
-            <li><a href="./como_se_produce.html">Cómo se produce</a></li>
-            <li><a href="./cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
-            <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
-            <li><a href="./consecuencias.html">Consecuencias</a></li>
-        </ul>
-      
-      <div class="texto">
-      <h2>Perfiles implicados en el bullying</h2>
-        <p>
-            El fenómeno del bullying no ocurre de forma aislada ni espontánea. 
-            En cada situación de acoso escolar, suelen estar implicados tres perfiles
-            principales: la persona agresora, la víctima y quienes observan. 
-            Cada uno de ellos desempeña un papel que influye en el desarrollo y
-            la duración del acoso. Comprender estos roles es fundamental para prevenir, 
-            detectar y actuar ante el bullying de forma eficaz.
-        </p>
-      </div>
-    </div>
-
-    <div class="perfiles">
-      <article class="perfil_agresor">
-         <h2>Agresor</h2>
-          <p>
-            Persona que intimida, humilla o agrede de forma intencional y 
-            repetida a otra. Suele buscar el control o la dominación, y puede 
-            actuar por inseguridad, necesidad de atención o imitación de modelos
-             negativos.
-          </p>
-          <img src="../Imagenes/agresor.png" alt="agresor">
-      </article>
-     
-      <article class="perfil_victima">
+      <section class="hero-perfiles">
+        <div class="hero-bg-svg">
+          <!-- SVG decorativo -->
+          <svg width="100%" height="180" viewBox="0 0 1440 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,80 C360,180 1080,0 1440,100 L1440,0 L0,0 Z" fill="#a077ff22"/>
+          </svg>
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-title">Perfiles Implicados en el Bullying</h1>
+          <p class="hero-sub">Comprender los roles es el primer paso para erradicar el acoso escolar.</p>
+          <span class="hero-quote">“El silencio de los testigos es el mejor aliado del bullying.”</span>
+        </div>
+      </section>
+      <section class="perfiles-grid-pro">
+        <article class="perfil-card-pro agresor">
+          <div class="perfil-icon-bg">
+            <img src="../Imagenes/agresor.png" alt="Agresor" class="perfil-img-pro">
+          </div>
+          <h2>Agresor</h2>
+          <p>Intimida, humilla o agrede de forma intencional y repetida. Busca control, atención o imita modelos negativos. <span class="perfil-cita">“El poder mal entendido se convierte en violencia.”</span></p>
+        </article>
+        <article class="perfil-card-pro victima">
+          <div class="perfil-icon-bg">
+            <img src="../Imagenes/victima.png" alt="Víctima" class="perfil-img-pro">
+          </div>
           <h2>Víctima</h2>
-            <p>
-            Persona que recibe el maltrato físico, verbal o psicológico.
-            A menudo es alguien más vulnerable, con baja autoestima o pocas
-            habilidades sociales, aunque cualquier persona puede convertirse en víctima.
-            </p>
-            <img src="../Imagenes/victima.png" alt="espectador">
-      </article>
-      <article class="perfil_espectador">
-        <h2>Espectadores</h2>
-        <p>
-          Personas que presencian el bullying sin intervenir. Pueden tener 
-          un rol pasivo (no hacen nada), activo (animan al agresor) o defensivo
-          (intentan ayudar a la víctima). Su actitud influye en que el bullying
-          continúe o se detenga.
-        </p>
-        <img src="../Imagenes/espectador.png" alt="esepctador">
-      </article>
-    </div>
+          <p>Recibe maltrato físico, verbal o psicológico. Suele ser vulnerable, pero cualquiera puede ser víctima. <span class="perfil-cita">“No es débil quien pide ayuda, es valiente.”</span></p>
+        </article>
+        <article class="perfil-card-pro espectador">
+          <div class="perfil-icon-bg">
+            <img src="../Imagenes/espectador.png" alt="Espectadores" class="perfil-img-pro">
+          </div>
+          <h2>Espectadores</h2>
+          <p>Presencian el bullying. Pueden ser pasivos, activos o defensores. Su actitud puede detener o perpetuar el acoso. <span class="perfil-cita">“Ser testigo te da el poder de cambiar la historia.”</span></p>
+        </article>
+      </section>
+      <section class="impacto-bullying">
+        <div class="impacto-content">
+          <h3>¿Sabías que...?</h3>
+          <p>Cada año, millones de jóvenes sufren bullying en silencio. Tu voz puede marcar la diferencia. <b>¡Actúa!</b></p>
+          <a href="./ayuda.html" class="btn-ayuda">Necesito ayuda</a>
+        </div>
+      </section>
     </main>
      <footer>
         <div class="footer-links">
@@ -132,15 +132,31 @@
             </div>
           </div>
       </footer>
-      <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
-
-            toggleButton.addEventListener('click', () => {
-              navMenu.classList.toggle('active');
-            });
-          });
-      </script>
+      <button id="botonCerrar" class="boton-cerrar" onclick="window.location.href='https://www.google.com'">Cerrar ventana</button>
 </body>
+<script>
+    // Menú hamburguesa responsive
+    const menuToggle = document.getElementById('menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      const closeMenu = document.getElementById('close-menu');
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        if (navMenu.classList.contains('active')) {
+          closeMenu.style.display = 'block';
+          menuToggle.classList.add('disabled');
+        } else {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }
+      });
+      closeMenu.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        setTimeout(() => {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }, 520);
+      });
+</script>
 </html>

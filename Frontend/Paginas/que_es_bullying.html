@@ -6,75 +6,117 @@
     <title>¿Qué es el bullying? (Acoso escolar)</title>
     <link rel="stylesheet" href="../Estilos/css_general.css" type="text/css">
     <link rel="stylesheet" href="../Estilos/css_que_es_bullying.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_index.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_popup.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_sublista_general.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="../Imagenes/bot logo.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="../Scripts/popup.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
         <div class="logo">
-           <a href="index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
+           <a href="../index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
         </div>
         <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-          ☰
+          <div class="hamburger-lines">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="menu-text">Menú</span>
         </button>
-        
         <nav class="nav-menu" id="nav-menu">
+          <button id="close-menu" class="close-menu" aria-label="Cerrar menú" style="display:none">&times;</button>
           <ul>
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./bullying.html">Bullying</a>
+            <li><a href="bullying.html">Bullying</a>
                 <ul class="sublista" id="desplegable">
-                  <li><a href="./que_es_bullying.html">Qué es</a></li>
-                  <li><a href="./como_se_produce.html">Cómo se produce</a></li>
-                  <li><a href="./cuando_ocurre _y_por que.html">Cuándo ocurre y por qué</a></li>
-                  <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
-                  <li><a href="./consecuencias.html">Consecuencias</a></li>
+                  <li><a href="que_es_bullying.html">Qué es</a></li>
+                  <li><a href="como_se_produce.html">Cómo se produce</a></li>
+                  <li><a href="cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
+                  <li><a href="perfiles_implicados.html">Perfiles implicados</a></li>
+                  <li><a href="consecuencias.html">Consecuencias</a></li>
               </ul>
             </li>
-            <li><a href="./chatbot.html">Chat</a></li>
-            <li><a href="./ayuda.html">Ayuda</a></li>
-            <li><a href="./sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="chatbot.html">Chat</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
           </ul>
         </nav>  
+        <div class="header-slogan-box">
+          <svg class="slogan-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" style="vertical-align: middle; margin-right: 10px;"><path d="M12 2L4 5v6c0 5.25 3.75 10 8 11 4.25-1 8-5.75 8-11V5l-8-3z" fill="#5D5FEF"/><path d="M12 2v19c4.25-1 8-5.75 8-11V5l-8-3z" fill="#A077FF" fill-opacity="0.5"/></svg>
+          <span class="header-slogan">Un clic, una charla, un cambio</span>
+        </div>
     </header>
 
     <main>
-
-      <h2>¿Qué es el bullying?</h2>
-
-      <div class="seccion">
-          <ul class="lista">
-            <li><a href="./que_es_bullying.html">Qué es</a></li>
-            <li><a href="./como_se_produce.html">Cómo se produce</a></li>
-            <li><a href="./cuando_ocurre _y_por que.html">Cuándo ocurre y por qué</a></li>
-            <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
-            <li><a href="./consecuencias.html">Consecuencias</a></li>
-        </ul>
-        <img class="imagen" src="../Imagenes/Que_es.jpg">
-      </div>
-      
-      <p class="clave">
-        El bullying o acoso escolar es una forma de violencia repetida que puede manifestarse de manera psicológica, verbal o física,
-         y que causa un gran impacto emocional en quien lo sufre.
-      </p>
-      
-     <p class="parrafo2"> 
-      Se caracteriza por ser una conducta intencional, repetida y mantenida en el tiempo que pretende conseguir la intimidación de la víctima.
-      Para distinguir el bullying de un conflicto puntual, debemos fijarnos en ciertas características clave:
-    </p>
-
-        <ul class="lista2">
-          <li> Si existe diferencia de poder entre las partes implicadas (una de ellas parece estar en inferioridad).</li>
-          <li>Si se buscaba ese conflicto o, por el contrario, ha ocurrido sin querer.</li>        
-          <li> Si existe intencionalidad de hacer daño por parte de la persona o grupo que agrede.</li>
-          <li>Si es una conducta que se repite y el objetivo es siempre la misma persona o, por el contrario, la persona que agrede suele tener problemas con más compañeros.</li>
-          <li>Si este tipo de maltrato se produce a través de redes sociales o Internet, estaríamos hablando de ciberbullying..</li>
-        </ul>
-      
-      <section class="cierre">
-        <h3>Recuerda:</h3>
-        <p>El bullying no es cosa de juegos. Hablar, apoyar y actuar puede marcar la diferencia.</p>
+      <!-- NUEVA SECCIÓN PROFESIONAL HERO v2 -->
+      <section class="bullying-hero-pro v2">
+        <div class="bullying-hero-bg-decor"></div>
+        <div class="bullying-hero-pro-content animate-fadein">
+          <h1>¿Qué es el <span>bullying</span>?</h1>
+          <p>
+            El <strong>bullying</strong> o acoso escolar es una forma de violencia repetida, psicológica, verbal o física, que causa un gran impacto emocional en quien lo sufre.
+          </p>
+          <a href="ayuda.html" class="bullying-hero-btn btn-violeta">¿Necesitas ayuda?</a>
+        </div>
       </section>
-        
+      <!-- FIN NUEVA SECCIÓN HERO v2 -->
+      <div class="bullying-separator animate-sep"></div>
+      <section class="bullying-content-grid">
+        <div class="bullying-img-col">
+          <img src="../Imagenes/Que_es.png" alt="Ilustración sobre bullying" class="bullying-img-compact animate-img">
+        </div>
+        <div class="bullying-cards-col">
+          <div class="bullying-card animate-card" style="--card-color:#e6f9ed;">
+            <div class="card-icon"><span style="font-size:2rem;">✅</span></div>
+            <div class="card-content">
+              <span class="card-title">Diferencia de poder</span>
+              <span class="card-desc">Una parte está en inferioridad.</span>
+            </div>
+          </div>
+          <div class="bullying-card animate-card" style="--card-color:#fffbe6;">
+            <div class="card-icon"><span style="font-size:2rem;">⚠️</span></div>
+            <div class="card-content">
+              <span class="card-title">Intencionalidad</span>
+              <span class="card-desc">El conflicto es buscado, no accidental.</span>
+            </div>
+          </div>
+          <div class="bullying-card animate-card" style="--card-color:#ffe6e6;">
+            <div class="card-icon"><span style="font-size:2rem;">😡</span></div>
+            <div class="card-content">
+              <span class="card-title">Daño intencionado</span>
+              <span class="card-desc">La persona o grupo agrede con intención.</span>
+            </div>
+          </div>
+          <div class="bullying-card animate-card" style="--card-color:#e6f0ff;">
+            <div class="card-icon"><span style="font-size:2rem;">🔁</span></div>
+            <div class="card-content">
+              <span class="card-title">Repetición</span>
+              <span class="card-desc">La conducta se repite y el objetivo suele ser la misma persona.</span>
+            </div>
+          </div>
+          <div class="bullying-card animate-card" style="--card-color:#e6eaff;">
+            <div class="card-icon"><span style="font-size:2rem;">🌐</span></div>
+            <div class="card-content">
+              <span class="card-title">Ciberbullying</span>
+              <span class="card-desc">Si ocurre en redes sociales o Internet.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bullying-remember-card animate-remember">
+        <div class="remember-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="12" fill="#A077FF"/>
+            <text x="12" y="17" text-anchor="middle" font-size="16" fill="#fff" font-family="Arial" font-weight="bold">i</text>
+          </svg>
+        </div>
+        <div class="remember-text">
+          <span class="remember-title">Recuerda:</span>
+          El bullying no es cosa de juegos.
+          <span class="remember-strong">Hablar, apoyar y actuar puede marcar la diferencia.</span>
+        </div>
+      </section>
     </main>
     <footer>
         <div class="footer-links">
@@ -115,15 +157,31 @@
             </div>
           </div>
       </footer>
+      <button id="botonCerrar" class="boton-cerrar" onclick="window.location.href='https://www.google.com'">Cerrar ventana</button>
       <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
-
-            toggleButton.addEventListener('click', () => {
-              navMenu.classList.toggle('active');
-            });
-          });
+      // Menú hamburguesa responsive
+      const menuToggle = document.getElementById('menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      const closeMenu = document.getElementById('close-menu');
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        if (navMenu.classList.contains('active')) {
+          closeMenu.style.display = 'block';
+          menuToggle.classList.add('disabled');
+        } else {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }
+      });
+      closeMenu.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        setTimeout(() => {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }, 520);
+      });
       </script>
 </body>
 </html>

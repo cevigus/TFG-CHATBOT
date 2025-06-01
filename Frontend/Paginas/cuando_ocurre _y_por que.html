@@ -6,78 +6,83 @@
     <title>Cuándo ocurre y por qué</title>
     <link rel="stylesheet" href="../Estilos/css_general.css" type="text/css">
     <link rel="stylesheet" href="../Estilos/css_cuando_ocurre.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_index.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_popup.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_sublista_general.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="../Imagenes/bot logo.ico">
+    <script src="../Scripts/popup.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <header class="main-header">
         <div class="logo">
-           <a href="index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
+           <a href="../index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
         </div>
         <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-          ☰
+          <div class="hamburger-lines">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="menu-text">Menú</span>
         </button>
-        
         <nav class="nav-menu" id="nav-menu">
+          <button id="close-menu" class="close-menu" aria-label="Cerrar menú" style="display:none">&times;</button>
           <ul>
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./bullying.html">Bullying</a>
+            <li><a href="bullying.html">Bullying</a>
                 <ul class="sublista" id="desplegable">
-                  <li><a href="./que_es_bullying.html">Qué es</a></li>
-                  <li><a href="./como_se_produce.html">Cómo se produce</a></li>
-                  <li><a href="./cuando_ocurre _y_por que.html">Cuándo ocurre y por qué</a></li>
-                  <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
-                  <li><a href="./consecuencias.html">Consecuencias</a></li>
+                  <li><a href="que_es_bullying.html">Qué es</a></li>
+                  <li><a href="como_se_produce.html">Cómo se produce</a></li>
+                  <li><a href="cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
+                  <li><a href="perfiles_implicados.html">Perfiles implicados</a></li>
+                  <li><a href="consecuencias.html">Consecuencias</a></li>
               </ul>
             </li>
-            <li><a href="./chatbot.html">Chat</a></li>
-            <li><a href="./ayuda.html">Ayuda</a></li>
-            <li><a href="./sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="chatbot.html">Chat</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
           </ul>
         </nav>  
+        <div class="header-slogan-box">
+          <svg class="slogan-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" style="vertical-align: middle; margin-right: 10px;"><path d="M12 2L4 5v6c0 5.25 3.75 10 8 11 4.25-1 8-5.75 8-11V5l-8-3z" fill="#5D5FEF"/><path d="M12 2v19c4.25-1 8-5.75 8-11V5l-8-3z" fill="#A077FF" fill-opacity="0.5"/></svg>
+          <span class="header-slogan">Un clic, una charla, un cambio</span>
+        </div>
     </header>
 
     <main>
-        <h2>Bullying: Cuándo ocurre y por qué</h2>
-        <div class="contenido">
-          <ul class="lista_enlaces">
-            <li><a href="./que_es_bullying.html">Qué es</a></li>
-            <li><a href="./como_se_produce.html">Cómo se produce</a></li>
-            <li><a href="./cuando_ocurre _y_por que.html">Cuándo ocurre y por qué</a></li>
-            <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
-            <li><a href="./consecuencias.html">Consecuencias</a></li>
-        </ul>
-          <img id="img_cuando" src="../Imagenes/img_cuando.png" alt="Bullying">
+      <section class="hero-wow">
+        <div class="hero-bg-anim"></div>
+        <div class="hero-content">
+          <h1>¿Cuándo ocurre y por qué?</h1>
+          <p class="hero-sub">Descubre los momentos y causas clave del bullying escolar</p>
         </div>
-        
-
-        <div class="seccion">
+      </section>
+      <div class="bullying-card-wow">
+        <nav class="bullying-tabs-wow">
+          <a href="./que_es_bullying.html"><span class="tab-icon">📖</span> Qué es</a>
+          <a href="./como_se_produce.html"><span class="tab-icon">🔄</span> Cómo se produce</a>
+          <a href="./cuando_ocurre _y_por que.html" class="active"><span class="tab-icon">⏰</span> Cuándo y por qué</a>
+          <a href="./perfiles_implicados.html"><span class="tab-icon">👥</span> Perfiles</a>
+          <a href="./consecuencias.html"><span class="tab-icon">⚠️</span> Consecuencias</a>
+        </nav>
+        <div class="bullying-content-wow">
+          <div class="bullying-fadein">
             <p>
-                Las edades más frecuentes rondan entre los 7 y los 16 años, 
-                según las estadísticas. Es,prácticamente, el 80% de su vida escolar
-                la que está expuesta a este problema.
+              Las edades más frecuentes rondan entre los <strong>7 y 16 años</strong>, según las estadísticas. Es, prácticamente, el 80% de su vida escolar la que está expuesta a este problema.
             </p>
-            
             <p>
-                El bullying se da tanto en colegios públicos como en privados
-                y, según algunos expertos, cuánto más grande es el centro escolar, 
-                mayor es el riesgo. El acoso escolar es algo que no tiene que ver
-                con el centro escolar ni su prestigio o calidad educativa; tiene
-                que ver con los individuos y la relación entre ellos, por lo que 
-                ningún colegio/instituto está exento de este problema.
+              El bullying se da tanto en colegios públicos como en privados y, según algunos expertos, cuanto más grande es el centro escolar, mayor es el riesgo. El acoso escolar no depende del prestigio o calidad educativa del centro, sino de las relaciones entre los individuos. Ningún colegio o instituto está exento de este problema.
             </p>
-
             <p>
-                La desinformación sobre el tema, la falta de educación
-                en valores tales como la empatía, el compañerismo y el 
-                respeto, y la falta de control y vigilancia por parte 
-                de padres, profesores u otro personal en los centros 
-                pueden ser factores importantes por los que se dan situaciones de acoso.
+              La <strong>desinformación</strong>, la falta de educación en valores como la empatía, el compañerismo y el respeto, así como la falta de control y vigilancia por parte de padres, profesores u otro personal, son factores clave que favorecen situaciones de acoso.
             </p>
+          </div>
+          <div class="bullying-quote-wow">
+            <span class="quote-emoji">💡</span>
+            <span class="quote-text">Educar en el respeto es la mejor vacuna contra el acoso.</span>
+          </div>
         </div>
-        <div class="frase-final">
-               <p>“Educar en el respeto es la mejor vacuna contra el acoso.”</p>
-        </div>
+      </div>
     </main>
 
     <footer>
@@ -119,15 +124,31 @@
             </div>
           </div>
       </footer>
+      <button id="botonCerrar" class="boton-cerrar" onclick="window.location.href='https://www.google.com'">Cerrar ventana</button>
       <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
-
-            toggleButton.addEventListener('click', () => {
-              navMenu.classList.toggle('active');
-            });
-          });
+     // Menú hamburguesa responsive
+     const menuToggle = document.getElementById('menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      const closeMenu = document.getElementById('close-menu');
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        if (navMenu.classList.contains('active')) {
+          closeMenu.style.display = 'block';
+          menuToggle.classList.add('disabled');
+        } else {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }
+      });
+      closeMenu.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        setTimeout(() => {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }, 520);
+      });
       </script>
 </body>
 </html>

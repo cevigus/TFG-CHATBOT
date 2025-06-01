@@ -6,62 +6,109 @@
     <title>Bullying</title>
     <link rel="stylesheet" href="../Estilos/css_general.css" type="text/css">
     <link rel="stylesheet" href="../Estilos/css_bullying.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_index.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_popup.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_sublista_general.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="../Imagenes/bot logo.ico">
+    <script src="../Scripts/popup.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
         <div class="logo">
-           <a href="index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
+           <a href="../index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
         </div>
         <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-          ☰
+          <div class="hamburger-lines">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="menu-text">Menú</span>
         </button>
-        
         <nav class="nav-menu" id="nav-menu">
+          <button id="close-menu" class="close-menu" aria-label="Cerrar menú" style="display:none">&times;</button>
           <ul>
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./bullying.html">Bullying</a>
+            <li><a href="bullying.html">Bullying</a>
                 <ul class="sublista" id="desplegable">
-                  <li><a href="./que_es_bullying.html">Qué es</a></li>
-                  <li><a href="./como_se_produce.html">Cómo se produce</a></li>
-                  <li><a href="./cuando_ocurre _y_por que.html">Cúado ocurre y por qué</a></li>
-                  <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
-                  <li><a href="./consecuencias.html">Consecuencias</a></li>
+                  <li><a href="que_es_bullying.html">Qué es</a></li>
+                  <li><a href="como_se_produce.html">Cómo se produce</a></li>
+                  <li><a href="cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
+                  <li><a href="perfiles_implicados.html">Perfiles implicados</a></li>
+                  <li><a href="consecuencias.html">Consecuencias</a></li>
               </ul>
             </li>
-            <li><a href="./chatbot.html">Chat</a></li>
-            <li><a href="./ayuda.html">Ayuda</a></li>
-            <li><a href="./sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="chatbot.html">Chat</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
           </ul>
         </nav>  
+        <div class="header-slogan-box">
+          <svg class="slogan-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" style="vertical-align: middle; margin-right: 10px;"><path d="M12 2L4 5v6c0 5.25 3.75 10 8 11 4.25-1 8-5.75 8-11V5l-8-3z" fill="#5D5FEF"/><path d="M12 2v19c4.25-1 8-5.75 8-11V5l-8-3z" fill="#A077FF" fill-opacity="0.5"/></svg>
+          <span class="header-slogan">Un clic, una charla, un cambio</span>
+        </div>
     </header>
 
     <main>
-
+      <section class="hero-bullying">
+        <div class="hero-content">
+          <h2>Todo sobre el bullying</h2>
+          <p class="subtitulo-motivacional">Juntos podemos crear un entorno seguro para todos.</p>
+          <div class="hero-cta">
+            <span class="hero-impact">
+              <span class="hero-impact-number">+500</span> personas han encontrado apoyo aquí
+            </span>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="../Imagenes/Bullying.png" alt="Ilustración bullying"/>
+        </div>
+      </section>
+      <div class="divider"></div>
+      <section class="info-cards">
+        <div class="info-card">
+          <span class="icono-enlace">📖</span>
+          <h3>¿Qué es?</h3>
+          <p>Descubre qué es el bullying y cómo identificarlo.</p>
+          <a href="./que_es_bullying.html" class="btn-link">Ver más</a>
+        </div>
+        <div class="info-card">
+          <span class="icono-enlace">🔄</span>
+          <h3>¿Cómo se produce?</h3>
+          <p>Conoce los mecanismos y formas en que se manifiesta el acoso escolar.</p>
+          <a href="./como_se_produce.html" class="btn-link">Ver más</a>
+        </div>
+        <div class="info-card">
+          <span class="icono-enlace">⏰</span>
+          <h3>¿Cuándo y por qué?</h3>
+          <p>Entiende cuándo suele ocurrir y los factores que lo propician.</p>
+          <a href="./cuando_ocurre _y_por que.html" class="btn-link">Ver más</a>
+        </div>
+        <div class="info-card">
+          <span class="icono-enlace">👦🏻‍🤝‍👧🏻</span>
+          <h3>Perfiles implicados</h3>
+          <p>Descubre los roles de agresor, víctima y espectadores.</p>
+          <a href="./perfiles_implicados.html" class="btn-link">Ver más</a>
+        </div>
+        <div class="info-card">
+          <span class="icono-enlace">⚠️</span>
+          <h3>Consecuencias</h3>
+          <p>Infórmate sobre el impacto y las secuelas del bullying.</p>
+          <a href="./consecuencias.html" class="btn-link">Ver más</a>
+        </div>
+      </section>
+      <section class="motivational-quote">
+        <blockquote>
+          "La información y la empatía son las mejores herramientas para prevenir el acoso escolar."
+        </blockquote>
+      </section>
     </main>
 
-    <h2>Todo sobre el bullying</h2>
-    <p>Detallamos toda la información sobre el bullying</p>
-    
-    <div class="contenido">
-        <ul class="lista_enlaces">
-            <li><a href="./que_es_bullying.html">Qué es</a></li>
-            <li><a href="./como_se_produce.html">Cómo se produce</a></li>
-            <li><a href="./cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
-            <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
-            <li><a href="./consecuencias.html">Consecuencias</a></li>
-        </ul>
-      <img class="imagen" src="../Imagenes/Bullying.png">
-    </div>
-   
-
-   
     <footer>
         <div class="footer-links">
-          <a href="#inicio">Inicio</a>
-          <a href="#ayuda">Ayuda</a>
-          <a href="#chatbot">Chatbot</a>
-          <a href="#contacto">Contacto</a>
+          <a href="../index.html">Inicio</a>
+          <a href="./ayuda.html">Ayuda</a>
+          <a href="./chatbot.html">Chatbot</a>
+          <a href="./sobre_nosotros.html">Contacto</a>
         </div>
         <div class="help-resources">
           <a href="https://aepae.es/" target="_blank">
@@ -95,15 +142,31 @@
             </div>
           </div>
       </footer>
-    <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
-
-            toggleButton.addEventListener('click', () => {
-              navMenu.classList.toggle('active');
-            });
-          });
-      </script>
+      <button id="botonCerrar" class="boton-cerrar" onclick="window.location.href='https://www.google.com'">Cerrar ventana</button>
+<script>
+     // Menú hamburguesa responsive
+     const menuToggle = document.getElementById('menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      const closeMenu = document.getElementById('close-menu');
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        if (navMenu.classList.contains('active')) {
+          closeMenu.style.display = 'block';
+          menuToggle.classList.add('disabled');
+        } else {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }
+      });
+      closeMenu.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        setTimeout(() => {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }, 520);
+      });
+</script>
 </body>
 </html>

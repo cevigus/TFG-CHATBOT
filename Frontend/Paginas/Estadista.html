@@ -12,9 +12,6 @@
         <div class="container">
             <div class="logo">Ruleta de las Emociones</div>
         </div>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-          ☰
-        </button>
     </header>
 
     <main class="container">
@@ -153,7 +150,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const res = await fetch("/estadisticas");
+        const res = await fetch("http://localhost:3000/estadisticas");
         const data = await res.json();
 
         console.log("Datos recibidos del servidor:", data); // 👀 Depuración
@@ -269,7 +266,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     <script>
     document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const res = await fetch("/estadisticas-usuario");
+        const res = await fetch("http://localhost:3000/estadisticas-usuario");
         const data = await res.json();
 
 
@@ -329,15 +326,5 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
     </script>
-    <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
-
-            toggleButton.addEventListener('click', () => {
-              navMenu.classList.toggle('active');
-            });
-          });
-      </script>
 </body>
 </html>

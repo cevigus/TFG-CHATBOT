@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeChat | Detector de Bullying</title>
     <link rel="stylesheet" href="../Estilos/css_general.css" type="text/css">
     <link rel="stylesheet" href="../Estilos/css_chatbot.css" type="text/css">
-    <title>SafeChat | Detector de Bullying</title>  
+    <link rel="stylesheet" href="../Estilos/css_index.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_popup.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_sublista_general.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="../Imagenes/bot logo.ico">
+    <script src="../Scripts/popup.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
@@ -14,111 +19,132 @@
            <a href="../index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
         </div>
         <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-          ☰
+          <div class="hamburger-lines">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="menu-text">Menú</span>
         </button>
-        
         <nav class="nav-menu" id="nav-menu">
+          <button id="close-menu" class="close-menu" aria-label="Cerrar menú" style="display:none">&times;</button>
           <ul>
             <li><a href="../index.html">Inicio</a></li>
-           <li><a href="./bullying.html">Bullying</a>
+            <li><a href="bullying.html">Bullying</a>
                 <ul class="sublista" id="desplegable">
-                  <li><a href="./que_es_bullying.html">Qué es</a></li>
-                  <li><a href="./como_se_produce.html">Cómo se produce</a></li>
-                  <li><a href="./cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
-                  <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
-                  <li><a href="./consecuencias.html">Consecuencias</a></li>
+                  <li><a href="que_es_bullying.html">Qué es</a></li>
+                  <li><a href="como_se_produce.html">Cómo se produce</a></li>
+                  <li><a href="cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
+                  <li><a href="perfiles_implicados.html">Perfiles implicados</a></li>
+                  <li><a href="consecuencias.html">Consecuencias</a></li>
               </ul>
             </li>
-            <li><a href="../Paginas/chatbot.html">Chat</a></li>
-            <li><a href="../Paginas/ayuda.html">Ayuda</a></li>
-            <li><a href="../Paginas/sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="chatbot.html">Chat</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
           </ul>
-        </nav>
+        </nav>  
+        <div class="header-slogan-box">
+          <svg class="slogan-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" style="vertical-align: middle; margin-right: 10px;"><path d="M12 2L4 5v6c0 5.25 3.75 10 8 11 4.25-1 8-5.75 8-11V5l-8-3z" fill="#5D5FEF"/><path d="M12 2v19c4.25-1 8-5.75 8-11V5l-8-3z" fill="#A077FF" fill-opacity="0.5"/></svg>
+          <span class="header-slogan">Un clic, una charla, un cambio</span>
+        </div>
     </header>
 
-    <h1 class="titulo">SafeChat - Tu Espacio Seguro</h1>
+    <section class="intro-section mini" style="margin-top: 32px;">
+      <div class="intro-mini-card">
+        <div class="intro-mini-icon" style="font-size: 2rem;">💬</div>
+        <div>
+          <h2 class="intro-mini-title">¿Cómo puede ayudarte SafeChat?</h2>
+          <p class="intro-mini-text">
+            Un espacio confidencial y anónimo para hablar sobre bullying y recibir apoyo. ¡No estás solo/a!
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <div class="parrafo">
-    <p><strong>¿Cómo puede ayudarte SafeChat?</strong> SafeChat es un asistente virtual diseñado para ayudarte a identificar posibles situaciones de acoso escolar (bullying). Puedes conversar de forma anónima y segura,
-       expresar tus inquietudes, o compartir lo que te ocurre. 
-      Nuestro chatbot está programado para detectar patrones relacionados
-      con el bullying y ofrecerte apoyo o recursos. Recuerda que no estás solo/a.
-       Este espacio es confidencial y está pensado para ayudarte.</p>
-  </div>
-
-<section id="datos-usuario">
-  <form id="formulario">
-    <p class="form-info">
-      ¿Te gustaría compartir género y edad de forma anónima? (opcional)
-    </p>
-
-    <label for="edad">Edad:</label>
-    <select id="edad" name="edad" required>
-      <option value="">Selecciona</option>
-      <option value="10-13">10-13</option>
-      <option value="14-16">14-16</option>
-      <option value="17-19">17-19</option>
-    </select>
-
-    <label for="genero">Género:</label>
-    <select id="genero" name="genero" required>
-      <option value="">Selecciona</option>
-      <option value="chico">Chico</option>
-      <option value="chica">Chica</option>
-      <option value="Prefiero no decirlo">Prefiero no decirlo</option>
-    </select>
-
-   <button id="boton" onclick="enviarDatosUsuario()" style="margin-left: 20px;">Enviar</button>
-  </form>
-</section>
-    
-
-  <div class="grupo1">
-   <!--Imagen Izquierda -->
-    <div class="chatbot_izquierda">
-      <img src="../Imagenes/chatbot.png" alt="Imagen del chatbot" />
-    </div>
-
-    <!--ChatBot -->
-    <div class="chatbot">
-          <div class="header">
+    <!-- SECCIÓN PRINCIPAL SAFECHAT -->
+    <main class="main-chatbot-redesign" style="margin-top: -18px;">
+      <div class="safechat-card">
+        <div class="safechat-form-chat">
+          <div class="safechat-chatbot">
+            <div class="header">
               SafeChat | Detector de Bullying
-          </div>
-          
-          <div class="messages" id="messages">
+            </div>
+            <div class="messages" id="messages">
               <div class="message-container">
-                  <img src="../Imagenes/imagen.png" class="bot-avatar" alt="Bot avatar">
-                  <div class="message bot">
-                      Hola, soy SafeChat. Comenzemos a hablar.
-                  </div>
+                <img src="../Imagenes/imagen.png" class="bot-avatar" alt="Bot avatar">
+                <div class="message bot">
+                  Hola, soy SafeChat. Comencemos a hablar.
+                </div>
               </div>
-          </div>
-          
-          <div class="input-area">
+            </div>
+            <div class="input-area">
               <input type="text" id="input" placeholder="Escribe aquí..." autocomplete="off">
               <button id="send">Enviar</button>
+            </div>
           </div>
-      </div>
-       <!-- Tips a la derecha -->
-        <div class="tips">
-          <h2>Tips para usar SafeChat</h2>
-          <ul>
-            <li>Saluda al chat antes de comenzar</li>
-            <li>Utiliza frases cortas y sencillas</li>
-            <li>Evita el lenguaje vulgar</li>
-          </ul>
+          <form id="formulario" class="safechat-form mejorado" autocomplete="off">
+            <h2 class="form-title">Comparte tus datos (opcional)</h2>
+            <p class="form-info">
+              <span class="icono-info">🛈</span>
+              <span>¿Te gustaría compartir género y edad de forma anónima?</span>
+            </p>
+            <div class="form-row mejorado">
+              <div class="input-group floating">
+                <select id="edad" name="edad" required>
+                  <option value="" disabled selected></option>
+                  <option value="10-13">10-13</option>
+                  <option value="14-16">14-16</option>
+                  <option value="17-19">17-19</option>
+                </select>
+                <label for="edad"><span class="icono">🎂</span> Edad</label>
+              </div>
+              <div class="input-group floating">
+                <select id="genero" name="genero" required>
+                  <option value="" disabled selected></option>
+                  <option value="chico">Chico</option>
+                  <option value="chica">Chica</option>
+                  <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                </select>
+                <label for="genero"><span class="icono">👤</span> Género</label>
+              </div>
+              <button id="boton" type="button" onclick="enviarDatosUsuario()">
+                <span class="icono-boton">🚀</span> <span>Enviar</span>
+              </button>
+            </div>
+          </form>
         </div>
- </div>
- <div class="chatbot-encuesta" style="text-align: center; margin: 20px auto;">
-<p>Tu opinión es importante. <a href="https://forms.gle/tcAFYz3ukUQf5PUx7" target="_blank">Responde esta encuesta anónima</a> para mejorar SafeChat.</p>
-</div>
+        <div class="safechat-tips">
+          <div class="tips mejorada">
+            <div class="tips-header">
+              <span class="tips-icono">💡</span>
+              <span class="tips-titulo">Tips para usar SafeChat</span>
+            </div>
+            <ul class="tips-lista">
+              <li><span class="tip-bullet">👋</span> Saluda al chat antes de comenzar la conversación.</li>
+              <li><span class="tip-bullet">🗣️</span> Utiliza frases claras y directas para expresar tus ideas.</li>
+              <li><span class="tip-bullet">🚫</span> Evita el uso de lenguaje ofensivo o inapropiado.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  
+    <div class="chatbot-encuesta mejorada">
+      <p>
+        <span class="encuesta-icono">📝</span>
+        <span class="encuesta-texto">
+          Tu opinión es importante.
+          <a href="https://forms.gle/tcAFYz3ukUQf5PUx7" target="_blank">Responde esta encuesta anónima</a>
+          para mejorar SafeChat.
+        </span>
+      </p>
+    </div>
   
     <footer>
         <div class="footer-links">
           <a href="../index.html">Inicio</a>
-          <a href="./Paginas/ayuda.html">Ayuda</a>
-          <a href="./Paginas/chatbot.html">Chatbot</a>
-          <a href="./Paginas/sobre_nosotros.html">Contacto</a>
+          <a href="./ayuda.html">Ayuda</a>
+          <a href="./chatbot.html">Chatbot</a>
+          <a href="./sobre_nosotros.html">Contacto</a>
         </div>
         <div class="help-resources">
           <a href="https://aepae.es/" target="_blank">
@@ -152,16 +178,32 @@
             </div>
           </div>
       </footer>
+      <button id="botonCerrar" class="boton-cerrar" onclick="window.location.href='https://www.google.com'">Cerrar ventana</button>
       <script src="../Scripts/chatbot.js"></script>
       <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
-
-            toggleButton.addEventListener('click', () => {
-              navMenu.classList.toggle('active');
-            });
-          });
+ // Menú hamburguesa responsive
+ const menuToggle = document.getElementById('menu-toggle');
+ const navMenu = document.getElementById('nav-menu');
+ const closeMenu = document.getElementById('close-menu');
+ menuToggle.addEventListener('click', () => {
+   navMenu.classList.toggle('active');
+   menuToggle.classList.toggle('active');
+   if (navMenu.classList.contains('active')) {
+     closeMenu.style.display = 'block';
+     menuToggle.classList.add('disabled');
+   } else {
+     closeMenu.style.display = 'none';
+     menuToggle.classList.remove('disabled');
+   }
+ });
+ closeMenu.addEventListener('click', () => {
+   navMenu.classList.remove('active');
+   menuToggle.classList.remove('active');
+   setTimeout(() => {
+     closeMenu.style.display = 'none';
+     menuToggle.classList.remove('disabled');
+   }, 520);
+ });
       </script>
 </body>
 </html>

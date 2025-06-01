@@ -1,5 +1,4 @@
-
- main {
+main {
     padding: 40px 10%;
     background: linear-gradient(to bottom, #EAF2FF, #DDEBFF);
 
@@ -38,8 +37,8 @@
   }
   h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
-    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-top: 24px;
     color: #4b4b4b;
   }
 
@@ -74,7 +73,7 @@
   .info.nosotros {
     text-align: center;
     padding-top: 40px;
-    border-top: 2px solid #ccc;
+    border-bottom: none !important;
   }
   
 
@@ -111,4 +110,711 @@
     background-color: #8F66E8;
   }
 
+  /* Menú desplegable mejorado */
+  #desplegable {
+    list-style: none;
+    min-width: 230px;
+    background: rgba(245, 240, 255, 0.85);
+    backdrop-filter: blur(10px) saturate(120%);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(93, 95, 239, 0.13), 0 1.5px 8px rgba(90,163,255,0.10);
+    padding: 16px 0;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.25s cubic-bezier(.77,0,.18,1), transform 0.25s cubic-bezier(.77,0,.18,1);
+  }
+
+  .nav-menu li:hover #desplegable,
+  .nav-menu li:focus-within #desplegable {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  #desplegable li {
+    padding: 12px 32px;
+    font-size: 1.08em;
+    color: #4b4b4b;
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    transition: background 0.18s, color 0.18s;
+    border-bottom: 1px solid #e1beff33;
+  }
+
+  #desplegable li:last-child {
+    border-bottom: none;
+  }
+
+  #desplegable li a {
+    color: #5D5FEF;
+    font-weight: 600;
+    display: block;
+    border-radius: 10px;
+    transition: background 0.18s, color 0.18s, padding-left 0.18s;
+    padding: 2px 0 2px 0;
+    letter-spacing: 0.2px;
+  }
+
+  #desplegable li a:hover {
+    background: linear-gradient(90deg, #5BA3FF 0%, #a077ff 100%);
+    color: #fff;
+    padding-left: 8px;
+    text-shadow: 0 2px 8px rgba(93,95,239,0.10);
+  }
+  
+  .nav-menu li {
+    position: relative;
+  }
+  
+  /* Quita el subrayado en el menú principal */
+  .nav-menu a:hover {
+    text-decoration: none !important;
+  }
+  
+  /* Fondo animado para el header */
+  .main-header {
+    background: linear-gradient(270deg, #a0c4ff, #e1beff, #5BA3FF, #a077ff, #a0c4ff);
+    background-size: 200% 200%;
+    animation: headerGradientMove 8s ease-in-out infinite;
+  }
+
+  @keyframes headerGradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .nav-menu a {
+    background: none;
+    color: #2B2D42;
+    opacity: 1;
+    position: relative;
+    transition: color 0.2s, background 0.2s;
+    border-radius: 8px;
+    padding: 6px 14px;
+  }
+
+  .nav-menu a:hover, .nav-menu a:focus {
+    background: #5BA3FF;
+    color: #fff !important;
+    text-decoration: none !important;
+    opacity: 1;
+    box-shadow: none;
+  }
+  
+  /* Elimino el subrayado animado */
+  .nav-menu a::after,
+  .nav-menu a:hover::after,
+  .nav-menu a:focus::after {
+    content: none !important;
+    display: none !important;
+  }
+  
+  /* --- NUEVAS SECCIONES Y MEJORAS --- */
+
+  /* Intro quote */
+  .intro-quote {
+    margin-top: 18px;
+    background: rgba(160, 196, 255, 0.13);
+    border-left: 5px solid #5BA3FF;
+    padding: 16px 24px;
+    border-radius: 10px;
+    font-style: italic;
+    color: #4b4b4b;
+    box-shadow: 0 2px 8px rgba(90,163,255,0.07);
+  }
+  .intro-quote cite {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.98em;
+    color: #5D5FEF;
+    font-weight: 600;
+  }
+
+  /* Tipos de bullying */
+  .bullying-tipos {
+    margin-top: 18px;
+    padding-left: 18px;
+    list-style: disc inside;
+    color: #333;
+    font-size: 1.08em;
+    line-height: 1.7;
+  }
+  .bullying-tipos li {
+    margin-bottom: 6px;
+  }
+
+  /* Combatir tips */
+  .combatir-tips {
+    margin-top: 18px;
+    background: #f5f0ff;
+    border-radius: 10px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 8px rgba(160,196,255,0.08);
+  }
+  .combatir-tips h3 {
+    color: #5D5FEF;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+  }
+  .combatir-tips ul {
+    padding-left: 18px;
+    list-style: circle inside;
+  }
+  .combatir-tips li {
+    margin-bottom: 5px;
+  }
+
+  /* Mejor separación visual entre secciones */
+  main > section {
+    margin-bottom: 28px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #e1beff44;
+  }
+  main > section:last-child {
+    border-bottom: none;
+  }
+
+  /* Responsive mejoras */
+  @media (max-width: 900px) {
+    main {
+      padding: 24px 2vw;
+    }
+    .intro {
+      gap: 18px;
+      padding: 0 2vw;
+    }
+    .intro-texto, .intro-img {
+      min-width: 0;
+      width: 100%;
+    }
+    .info {
+      flex-direction: column !important;
+      align-items: center;
+      gap: 18px;
+      padding: 0 2vw;
+    }
+    .info-img, .info-texto {
+      min-width: 0;
+      width: 100%;
+    }
+    .nosotros-card {
+      flex-direction: column;
+      padding: 18px 2vw;
+      gap: 18px;
+      max-width: 99vw;
+    }
+    .nosotros-info {
+      padding: 0;
+    }
+    .bullying-tipos {
+      padding-left: 28px;
+      font-size: 1em;
+    }
+    .bullying-tipos li {
+      text-indent: -12px;
+      padding-left: 12px;
+      line-height: 1.7;
+      word-break: break-word;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      margin-top: 18px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    main {
+      padding: 8px 0.5vw;
+    }
+    .intro {
+      flex-direction: column;
+      gap: 10px;
+      padding: 0 1vw;
+    }
+    .intro-texto, .intro-img {
+      width: 100%;
+      min-width: 0;
+    }
+    .intro-img img {
+      border-radius: 7px;
+    }
+    .info {
+      flex-direction: column !important;
+      gap: 10px;
+      padding: 0 1vw;
+    }
+    .info-img, .info-texto {
+      width: 100%;
+      min-width: 0;
+    }
+    .info-img img {
+      border-radius: 7px;
+    }
+    .nosotros-card {
+      flex-direction: column;
+      padding: 6px 1vw;
+      border-radius: 10px;
+      gap: 10px;
+      max-width: 99vw;
+    }
+    .nosotros-info h2 {
+      font-size: 1.1rem;
+    }
+    .nosotros-info p {
+      font-size: 0.98em;
+    }
+    .contacto-box {
+      padding: 8px 2vw 6px 2vw;
+      max-width: 99vw;
+    }
+    .form-contacto input, .form-contacto textarea {
+      font-size: 0.98em;
+    }
+    .form-contacto button {
+      font-size: 1em;
+      padding: 8px 0;
+    }
+    .form-aviso {
+      font-size: 0.92em;
+    }
+    .boton-cerrar {
+      right: 8px;
+      bottom: 8px;
+      padding: 7px 12px;
+      font-size: 0.98em;
+    }
+    footer {
+      padding: 10px 1vw 6px 1vw;
+      font-size: 13px;
+      gap: 8px;
+      border-radius: 0 0 10px 10px;
+    }
+    .footer-links {
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 4px;
+    }
+    .footer-info {
+      font-size: 0.92em;
+    }
+    .help-resources {
+      flex-direction: column;
+      gap: 8px;
+    }
+    .help-icon {
+      width: 36px;
+    }
+    .social-icons {
+      gap: 8px;
+      padding: 4px 0 0 0;
+    }
+    .social-icons img {
+      width: 18px;
+    }
+    .info.info-bullying {
+      flex-direction: column-reverse !important;
+    }
+    .bullying-tipos {
+      padding-left: 22px;
+      font-size: 0.98em;
+    }
+    .bullying-tipos li {
+      text-indent: -10px;
+      padding-left: 10px;
+      line-height: 1.7;
+      word-break: break-word;
+    }
+    .nav-menu a:hover,
+    .nav-menu a:focus,
+    .nav-menu a:active,
+    .nav-menu a:focus-visible {
+      background: none !important;
+      color: inherit !important;
+      text-shadow: none !important;
+      box-shadow: none !important;
+      padding-left: 18px !important;
+    }
+  }
+  
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* --- Formulario de contacto en sección nosotros --- */
+  .contacto-box {
+    margin: 36px auto 0 auto;
+    max-width: 420px;
+    background: rgba(160, 196, 255, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(90,163,255,0.07);
+    padding: 28px 24px 18px 24px;
+    text-align: left;
+  }
+  .contacto-box h3 {
+    color: #5D5FEF;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .form-contacto label {
+    font-weight: 600;
+    color: #4b4b4b;
+  }
+  .form-contacto input,
+  .form-contacto textarea {
+    padding: 10px 12px;
+    border: 1.5px solid #bbaeea;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    background: #fff;
+    transition: border 0.2s;
+    resize: none;
+  }
+  .form-contacto input:focus,
+  .form-contacto textarea:focus {
+    border-color: #5BA3FF;
+    outline: none;
+  }
+  .form-contacto textarea {
+    min-height: 80px;
+    max-height: 180px;
+  }
+  .form-contacto button {
+    background: linear-gradient(90deg, #5BA3FF 0%, #a077ff 100%);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 0;
+    margin-top: 8px;
+    font-size: 1.08em;
+    cursor: not-allowed;
+    opacity: 0.7;
+    transition: background 0.3s;
+  }
+  .form-aviso {
+    font-size: 0.95em;
+    color: #888;
+    margin-top: 8px;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    .contacto-box {
+      padding: 14px 4vw 10px 4vw;
+      max-width: 98vw;
+    }
+  }
+  
+  /* --- Tarjeta para sección nosotros --- */
+  .nosotros-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 4px 24px rgba(93,95,239,0.10);
+    border-radius: 22px;
+    padding: 40px 32px;
+    margin: 0 auto 40px auto;
+    max-width: 950px;
+  }
+  .nosotros-info {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 18px 0 0;
+  }
+  .nosotros-info h2 {
+    font-size: 2.3rem;
+    color: #5D5FEF;
+    margin-bottom: 18px;
+    margin-top: 0;
+  }
+  .nosotros-info p {
+    font-size: 1.18rem;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+  .nosotros-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 260px;
+  }
+
+  @media (max-width: 900px) {
+    .nosotros-card {
+      flex-direction: column;
+      padding: 24px 6vw;
+      gap: 24px;
+    }
+    .nosotros-info {
+      padding: 0;
+    }
+  }
+  @media (max-width: 600px) {
+    .nosotros-card {
+      padding: 10px 2vw;
+      border-radius: 12px;
+    }
+    .nosotros-info h2 {
+      font-size: 1.3rem;
+    }
+    .nosotros-info p {
+      font-size: 1em;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 900px) {
+    .nav-menu ul {
+      gap: 10px;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      scrollbar-width: none;
+    }
+    .nav-menu ul::-webkit-scrollbar {
+      display: none;
+    }
+    .nav-menu a {
+      font-size: 0.98rem;
+      padding: 8px 10px;
+      white-space: nowrap;
+    }
+    .main-header {
+      padding: 12px 10px;
+      gap: 12px;
+    }
+    .logo img {
+      max-height: 54px;
+    }
+    .header-slogan-box {
+      display: none !important;
+    }
+    .header-slogan {
+      font-size: 1.05rem;
+      width: 100%;
+      max-width: 300px;
+      white-space: normal;
+      border-right: none !important;
+      animation: none !important;
+      text-align: left;
+      line-height: 1.2;
+      overflow: visible;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .menu-text {
+      display: none !important;
+      visibility: hidden !important;
+      width: 0 !important;
+      height: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      font-size: 0 !important;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 900px) {
+    /* .info.info-bullying {
+      flex-direction: column-reverse !important;
+    } */
+  }
+  
+  @media (min-width: 768px) and (max-width: 1300px) {
+    .intro-img img,
+    .info-img img {
+      max-width: 420px;
+      min-width: 280px;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+      margin: 0 auto;
+      display: block;
+    }
+    .intro, .info {
+      flex-direction: row !important;
+      gap: 32px;
+      align-items: center;
+    }
+    .intro-texto, .info-texto {
+      min-width: 280px;
+      max-width: 520px;
+      width: 100%;
+    }
+    .intro-img, .info-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .header-slogan {
+      width: 100% !important;
+      border-right: none !important;
+      animation: none !important;
+      white-space: normal !important;
+      overflow: visible !important;
+      font-size: 1.1rem !important;
+      text-align: left;
+      -webkit-text-fill-color: initial;
+      background-clip: unset;
+      -webkit-background-clip: unset;
+    }
+    .header-slogan-box {
+      min-width: 180px;
+      max-width: 350px;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (min-width: 900px) and (max-width: 1300px) {
+    main {
+      padding: 24px 4vw;
+    }
+    .main-header {
+      padding: 14px 18px 14px 18px;
+      min-height: 70px;
+      gap: 18px;
+    }
+    .intro, .info {
+      gap: 24px;
+    }
+    .intro-img img,
+    .info-img img {
+      max-width: 340px;
+      min-width: 200px;
+      aspect-ratio: 4/3;
+    }
+    .intro-texto, .info-texto {
+      max-width: 420px;
+      font-size: 1.05rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    .header-slogan-box {
+      min-width: 120px;
+      max-width: 260px;
+      padding: 6px 10px;
+      margin-left: 10px;
+    }
+    .header-slogan {
+      font-size: 1.05rem;
+    }
+  }
+  
+  @media (min-width: 1100px) and (max-width: 1400px) {
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 32px;
+    }
+    .intro, .info {
+      gap: 32px;
+    }
+    .intro-texto, .info-texto {
+      max-width: 480px;
+      font-size: 1.08rem;
+    }
+    .intro-img, .info-img {
+      max-width: 420px;
+      min-width: 260px;
+      flex: 1 1 340px;
+    }
+    .intro-img img, .info-img img {
+      max-width: 100%;
+      min-width: 0;
+      border-radius: 12px;
+    }
+  }
+  
+  @media (min-width: 900px) and (max-width: 1100px) {
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 18px 12px;
+    }
+    .intro, .info {
+      gap: 18px;
+    }
+    .intro-texto, .info-texto {
+      max-width: 420px;
+      font-size: 1.05rem;
+    }
+    .intro-img, .info-img {
+      max-width: 340px;
+      min-width: 180px;
+      flex: 1 1 220px;
+    }
+    .intro-img img, .info-img img {
+      max-width: 100%;
+      min-width: 0;
+      border-radius: 10px;
+    }
+  }
+  
+  .solo-movil { display: none; }
+  .solo-desktop { display: block; }
+
+  @media (max-width: 900px) {
+    .solo-movil { 
+      display: block !important;
+      margin: 18px 0 !important; /* Espacio arriba y abajo de la imagen en móvil */
+    }
+    .solo-desktop { display: none !important; }
+  }
+  
+  .intro-img img,
+  .info-img img {
+    box-shadow: 0 4px 18px rgba(93,95,239,0.10), 0 1.5px 8px rgba(90,163,255,0.08);
+    border: 2px solid rgba(160, 196, 255, 0.18);
+    background: rgba(255,255,255,0.10);
+    transition: 
+      box-shadow 0.3s cubic-bezier(.77,0,.18,1),
+      border-color 0.3s,
+      filter 0.3s;
+  }
+  .intro-img img:hover,
+  .info-img img:hover {
+    box-shadow: 0 8px 32px rgba(93,95,239,0.16), 0 2px 12px rgba(90,163,255,0.13);
+    border-color: #5BA3FF;
+    filter: brightness(1.07) saturate(1.13) drop-shadow(0 0 8px #a077ff44);
+  }
+  
+  #desplegable li a:hover {
+    background: linear-gradient(270deg, #a0c4ff, #e1beff, #5BA3FF, #a077ff, #a0c4ff);
+    background-size: 200% 200%;
+    color: #fff;
+    padding-left: 8px;
+    text-shadow: 0 2px 8px rgba(93,95,239,0.10);
+  }
   

@@ -1,148 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cómo se produce</title>
+    <title>¿Cómo se produce el bullying?</title>
     <link rel="stylesheet" href="../Estilos/css_general.css" type="text/css">
     <link rel="stylesheet" href="../Estilos/css_como_se_produce.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_index.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_popup.css" type="text/css">
+    <link rel="stylesheet" href="../Estilos/css_sublista_general.css" type="text/css">
     <link rel="icon" type="image/x-icon" href="../Imagenes/bot logo.ico">
+    <script src="../Scripts/popup.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
-    
     <header class="main-header">
         <div class="logo">
-           <a href="index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
+           <a href="../index.html"><img src="../Imagenes/logo.jpg" alt="GGM"></a>    
         </div>
         <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-          ☰
+          <div class="hamburger-lines">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="menu-text">Menú</span>
         </button>
-        
         <nav class="nav-menu" id="nav-menu">
+          <button id="close-menu" class="close-menu" aria-label="Cerrar menú" style="display:none">&times;</button>
           <ul>
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./bullying.html">Bullying</a>
+            <li><a href="bullying.html">Bullying</a>
                 <ul class="sublista" id="desplegable">
-                  <li><a href="./que_es_bullying.html">Qué es</a></li>
-                  <li><a href="./como_se_produce.html">Cómo se produce</a></li>
-                  <li><a href="./cuando_ocurre _y_por que.html">Cuándo ocurre y por qué</a></li>
-                  <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
-                  <li><a href="./consecuencias.html">Consecuencias</a></li>
+                  <li><a href="que_es_bullying.html">Qué es</a></li>
+                  <li><a href="como_se_produce.html">Cómo se produce</a></li>
+                  <li><a href="cuando_ocurre _y_por que.html">Cúando ocurre y por qué</a></li>
+                  <li><a href="perfiles_implicados.html">Perfiles implicados</a></li>
+                  <li><a href="consecuencias.html">Consecuencias</a></li>
               </ul>
             </li>
-            <li><a href="./chatbot.html">Chat</a></li>
-            <li><a href="./ayuda.html">Ayuda</a></li>
-            <li><a href="./sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="chatbot.html">Chat</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>
+            <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
           </ul>
         </nav>  
+        <div class="header-slogan-box">
+          <svg class="slogan-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" style="vertical-align: middle; margin-right: 10px;"><path d="M12 2L4 5v6c0 5.25 3.75 10 8 11 4.25-1 8-5.75 8-11V5l-8-3z" fill="#5D5FEF"/><path d="M12 2v19c4.25-1 8-5.75 8-11V5l-8-3z" fill="#A077FF" fill-opacity="0.5"/></svg>
+          <span class="header-slogan">Un clic, una charla, un cambio</span>
+        </div>
     </header>
-
-
     <main>
-      <h2>¿Cómo se produce el bullying?</h2>
-      <div class="seccion">
-        <ul class="lista">
-          <li><a href="./que_es_bullying.html">Qué es</a></li>
-          <li><a href="./como_se_produce.html">Cómo se produce</a></li>
-          <li><a href="./cuando_ocurre _y_por que.html">Cuándo ocurre y por qué</a></li>
-          <li><a href="./perfiles_implicados.html">Perfiles implicados</a></li>
-          <li><a href="./consecuencias.html">Consecuencias</a></li>
-      </ul>
-            <div class="sub_seccion">
-                <img src="../Imagenes/como_se_produce.webp" alt="como_se_produce">
-                <p>
-                  El bullying se produce cuando una persona o un grupo de personas ejerce de 
-                  manera intencionada y repetida violencia física, verbal, psicológica o social 
-                  sobre otra persona, generalmente en un contexto como la escuela, el trabajo o las redes sociales.
-                  Los <strong>métodos más comunes</strong> son:
-                </p>
-                
+      <section class="bullying-hero-pro v2">
+        <!-- SVG decorativo animado fondo burbujas -->
+        <svg class="hero-bg-bubbles" width="100%" height="320" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;z-index:0;pointer-events:none;"><circle cx="200" cy="90" r="60" fill="#A077FF22"><animate attributeName="cy" values="90;120;90" dur="7s" repeatCount="indefinite"/></circle><circle cx="1200" cy="180" r="40" fill="#5D5FEF22"><animate attributeName="cy" values="180;140;180" dur="8s" repeatCount="indefinite"/></circle><circle cx="700" cy="60" r="30" fill="#A077FF33"><animate attributeName="cy" values="60;100;60" dur="6s" repeatCount="indefinite"/></circle></svg>
+        <div class="bullying-hero-bg-decor"></div>
+        <div class="bullying-hero-pro-content animate-innovate">
+          <h1 class="bullying-hero-title-gradient animate-zoom">¿Cómo se produce el <span>bullying</span>?</h1>
+          <p class="bullying-hero-desc animate-fadein">
+            El bullying puede manifestarse de muchas formas, pero siempre implica una agresión intencionada y repetida. Conoce los principales métodos y cómo afectan a las víctimas.
+          </p>
+          <div class="bullying-hero-card-glass hero-card-glow">
+            <img class="bullying-hero-img-glass" src="../Imagenes/como se produce.png" alt="Ilustración de cómo se produce el bullying">
+          </div>
+          <div class="hero-motivational animate-slideup">¡Juntos podemos frenar el bullying!</div>
+        </div>
+      </section>
+      <div class="bullying-separator animate-sep"></div>
+      <section class="heptagon-title" style="margin-top:2.5rem;">
+        <h2>Formas principales de <span>bullying</span></h2>
+      </section>
+      <section class="bullying-cards-section">
+        <div class="modern-cards-grid">
+          <div class="modern-card">
+            <img class="modern-card-img" src="../Imagenes/bloqueo.png" alt="Bloqueo Social">
+            <div class="modern-card-content">
+              <div class="modern-card-title">Bloqueo social</div>
+              <div class="modern-card-desc">Aislar y marginar a la víctima, haciéndola sentir invisible y bloqueando su interacción con el grupo.</div>
             </div>
-              
-       </div> 
-
-
-    <h2 class="h2_seccion2">Bloqueo social</h2>
-    <div class="seccion2">
-      <p>
-        Consiste en aislar y marginar a la víctima de forma indirecta, 
-        haciéndola sentir invisible y bloqueando su interacción con el resto del grupo.
-        Sería, por ejemplo, no dirigirle la palabra e impedir que los compañeros lo hagan, ignorarlo cuando habla,
-         dejarlo solo en los recreos, tratarlo como si no existiera...
-        Es una actuación frecuentemente invisible y que no deja huellas, pero es una de las más usadas.
-      </p>
-      <img src="../Imagenes/bloque_social.jpg" alt="Bloqueo Social">
-
-    </div>
-
-    <h2 class="h2_seccion2">Exclusión social</h2>
-    <div class="seccion3">
-      <img src="../Imagenes/exclusion_social.jpg" alt="Exclusión Social">
-      <p>
-          A diferencia del anterior, la exclusión se caracteriza por ser
-          una conducta en la que se rechaza de forma directa a la víctima;
-          se le aísla, se impide su expresión y su participación en juegos, y 
-          se produce el vacío social en su entorno.
-      </p>
-    </div>
-
-    <h2 class="h2_seccion2">Manipulación social</h2>
-    <div class="seccion2">
-      <p>
-          Es aquella conducta en la que el acosador pretende poner a
-          todos los compañeros en contra de la víctima, ayudándose de 
-          la creación de rumores y distorsionando su imagen, creando una
-          totalmente negativa que le permita obtener beneficios propios y
-          refuerzo por parte del resto del grupo.
-      </p>
-      <img src="../Imagenes/manipulacion_social.jpg" alt="Manipulación socil">
-    </div>
-
-    <h2 class="h2_seccion2">Coacción</h2>
-    <div class="seccion3">
-      <img src="../Imagenes/coaccion.png" alt="Coacción">
-      <p>
-        Aquí se agrupan las conductas en las que la víctima se ve obligado a hacer cosas
-        en contra de su voluntad, resultado de un posible chantaje llevado a cabo por el
-        agresor (por ejemplo, “si no haces mi tarea de matemáticas para mañana, te daré
-        una paliza”). De esta manera, el agresor tiene sensación de control y dominio 
-        sobre la víctima.
-      </p>
-    </div>
-
-    <h2 class="h2_seccion2">Hostigamiento</h2>
-    <div class="seccion2">
-      <p>
-        Son todas aquellas conductas que provocan el acoso psicológico: humillaciones,
-        provocaciones, faltas de respeto, desprecio, odio, ridiculización, el menosprecio,
-        los motes, la manifestación gestual del desprecio, la imitación burlesca…
-      </p>
-      <img src="../Imagenes/Hostigamiento.jpg" alt="Hostigamiento">
-    </div>
-
-    <h2 class="h2_seccion2">Intimidación</h2>
-    <div class="seccion3">
-      <img class="intimidacion" src="../Imagenes/intimidacion.jpg" alt="Intimidación">
-      <p id="intimidacionp">
-        Se refiere a cualquier conducta dirigida a causar miedo,
-        angustia o sometimiento en la víctima, ya sea mediante 
-        amenazas verbales, gestos, miradas intimidantes o acciones físicas.
-        El objetivo del agresor es dominar, controlar o someter psicológicamente
-        a la víctima.
-      </p>
-    </div>
-
-    <h2 class="h2_seccion2">Amenaza a la integridad</h2>
-    <div class="seccion2">
-      <p>
-        Agrupa las conductas de acoso que pretenden 
-        atacar el bienestar físico del niño o de su familia,
-         o mediante la extorsión.
-      </p>
-      <img src="../Imagenes/integridad_fisica.jpg" alt="Integridad">
-    </div>
+          </div>
+          <div class="modern-card">
+            <img class="modern-card-img" src="../Imagenes/exclusion.png" alt="Exclusión Social">
+            <div class="modern-card-content">
+              <div class="modern-card-title">Exclusión social</div>
+              <div class="modern-card-desc">Rechazo directo a la víctima, impidiendo su participación y expresión en el grupo.</div>
+            </div>
+          </div>
+          <div class="modern-card">
+            <img class="modern-card-img" src="../Imagenes/manipulacion.png" alt="Manipulación Social">
+            <div class="modern-card-content">
+              <div class="modern-card-title">Manipulación social</div>
+              <div class="modern-card-desc">El acosador pone al grupo en contra de la víctima mediante rumores y distorsión de su imagen.</div>
+            </div>
+          </div>
+          <div class="modern-card">
+            <img class="modern-card-img" src="../Imagenes/coaccion.png" alt="Coacción">
+            <div class="modern-card-content">
+              <div class="modern-card-title">Coacción</div>
+              <div class="modern-card-desc">Obligar a la víctima a hacer cosas en contra de su voluntad, generalmente mediante chantaje o amenazas.</div>
+            </div>
+          </div>
+          <div class="modern-card">
+            <img class="modern-card-img" src="../Imagenes/hostigamiento.png" alt="Hostigamiento">
+            <div class="modern-card-content">
+              <div class="modern-card-title">Hostigamiento</div>
+              <div class="modern-card-desc">Conductas de acoso psicológico: humillaciones, provocaciones, desprecio, ridiculización, motes, etc.</div>
+            </div>
+          </div>
+          <div class="modern-card">
+            <img class="modern-card-img" src="../Imagenes/intimidacion.png" alt="Intimidación">
+            <div class="modern-card-content">
+              <div class="modern-card-title">Intimidación</div>
+              <div class="modern-card-desc">Conductas dirigidas a causar miedo o sometimiento: amenazas, gestos, miradas o acciones físicas.</div>
+            </div>
+          </div>
+          <div class="modern-card">
+            <img class="modern-card-img" src="../Imagenes/amenanaz.png" alt="Amenaza a la integridad">
+            <div class="modern-card-content">
+              <div class="modern-card-title">Amenaza a la integridad</div>
+              <div class="modern-card-desc">Conductas que buscan atacar el bienestar físico de la víctima o su familia, o extorsión.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bullying-remember-card animate-remember">
+        <div class="remember-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="12" fill="#A077FF"/>
+            <text x="12" y="17" text-anchor="middle" font-size="16" fill="#fff" font-family="Arial" font-weight="bold">i</text>
+          </svg>
+        </div>
+        <div class="remember-text">
+          <span class="remember-title">Recuerda:</span>
+          El bullying puede tomar muchas formas, pero siempre es dañino. <span class="remember-strong">Detectarlo a tiempo es clave para frenarlo.</span>
+        </div>
+      </section>
     </main>
-
     <footer>
         <div class="footer-links">
           <a href="../index.html">Inicio</a>
@@ -182,15 +172,31 @@
             </div>
           </div>
       </footer>
-      <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.getElementById('menu-toggle');
-            const navMenu = document.getElementById('nav-menu');
-
-            toggleButton.addEventListener('click', () => {
-              navMenu.classList.toggle('active');
-            });
-          });
-      </script>
+      <button id="botonCerrar" class="boton-cerrar" onclick="window.location.href='https://www.google.com'">Cerrar ventana</button>
+<script>
+    // Menú hamburguesa responsive
+    const menuToggle = document.getElementById('menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      const closeMenu = document.getElementById('close-menu');
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        if (navMenu.classList.contains('active')) {
+          closeMenu.style.display = 'block';
+          menuToggle.classList.add('disabled');
+        } else {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }
+      });
+      closeMenu.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        setTimeout(() => {
+          closeMenu.style.display = 'none';
+          menuToggle.classList.remove('disabled');
+        }, 520);
+      });
+</script>
 </body>
 </html>
