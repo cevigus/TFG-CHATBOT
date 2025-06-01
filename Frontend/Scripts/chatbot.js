@@ -14,7 +14,7 @@ async function enviarMensaje() {
   
   // Enviar mensaje a Dialogflow por medio del endpoint /chat
   try {
-    const respuestaChat = await fetch('http://localhost:3000/chat', {
+    const respuestaChat = await fetch('/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -34,7 +34,7 @@ async function enviarMensaje() {
 
   // Enviar mensaje al endpoint /mensaje para guardarlo en MongoDB
   try {
-  const respuestaMensaje = await fetch('http://localhost:3000/mensaje', {
+  const respuestaMensaje = await fetch('/mensaje', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ message: mensaje })
@@ -98,7 +98,7 @@ async function enviarDatosUsuario() {
   }
 
   try {
-    const res = await fetch("http://localhost:3000/estadisticas-usuario", {
+    const res = await fetch("/estadisticas-usuario", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ genero, edad })
