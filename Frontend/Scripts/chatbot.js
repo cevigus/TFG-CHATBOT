@@ -73,10 +73,8 @@ function agregarMensaje(remitente, texto) {
 
   messagesDiv.appendChild(messageContainer);
 
-  // Scroll automático al último mensaje (asegurado con setTimeout)
-  setTimeout(() => {
-    messagesDiv.scrollTop = messagesDiv.scrollHeight;
-  }, 0);
+  // Opcional: desplazar el scroll hasta el final para ver el último mensaje
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
 
 // Agregar el listener al botón "Enviar"
