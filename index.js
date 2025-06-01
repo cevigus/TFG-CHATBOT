@@ -49,12 +49,88 @@ const Usuario = mongoose.model("Usuario", usuarioSchema);
 function detectarEmocion(mensaje) {
   const lower = mensaje.toLowerCase();
 
-  const emociones = {
-    alegria: ["alegre", "alegria", "feliz", "contento", "entusiasmado", "emocionado"],
-    ira: ["enojado", "furioso", "molesto", "ira", "rabia", "enfado"],
-    miedo: ["asustado", "miedo", "aterrorizado", "nervioso", "ansioso", "temor"],
-    tristeza: ["triste", "tristeza", "deprimido", "desanimado", "melancolico", "llorando"],
-    asco: ["asco", "repugnante", "desagradable", "repulsivo", "horrible"]
+const emociones = {
+ alegria: [
+   "alegría", "felicidad", "contento", "contenta", "entusiasmo", "euforia", 
+   "emoción", "placer", "satisfacción", "gozo", "alegría inmensa", 
+   "estoy feliz", "me siento bien", "estoy en la gloria", "estoy de buen humor", 
+   "ando con buenas vibras", "ando re feliz", "ando chill", "tengo buenas vibes", 
+   "estoy lo más feliz", "ando de chill", "alegre", "feliz", "entusiasmado", 
+   "emocionado", "eufórico", "animado", "satisfecho", "entusiasmada", 
+   "todo va genial", "estoy sonriendo", "me encanta", "me hizo el día", 
+   "estoy en las nubes", "me siento pleno", "estoy radiante", 
+   "disfrutando al máximo", "con el corazón lleno", "con una sonrisa", 
+   "vibro alto", "estoy feliz de la vida", "júbilo", "emocionada", 
+   "radiante", "vibrante", "lleno de vida", "pura energía positiva", 
+   "que chévere", "esto es maravilloso", "una alegría enorme", "estoy on fire", 
+   "estoy en mi peak", "pura buena onda", "piel de gallina de la emoción", 
+   "brillo en los ojos", "no puedo dejar de sonreír", "saltando de alegría", 
+   "mi alma canta", "la vida me sonríe", "agradecido con la vida", 
+   "bendecido", "bendecida", "mil gracias", "qué afortunado soy", 
+   "lleno de amor", "feliz por ti", "compartiendo alegría", 
+   "tu felicidad es mi felicidad"
+],
+
+ ira: [
+  "ira", "enojo", "enfado", "rabia", "furia", "molestia", "irritación", 
+  "frustración", "cólera", "me hierve la sangre", "estoy que exploto", 
+  "me tienen harto", "me tienen harta", "estoy re caliente", 
+  "me sacaron de quicio", "me re sacó", "furioso", "furiosa", 
+  "estoy furiosa", "estoy furioso", "estoy hecho una furia", 
+  "me tienen podrido", "me tiene enojado", "enfadado", "enfadada", 
+  "ardido", "ardida", "me fastidia", "estoy rojo de la rabia", 
+  "perdí la paciencia", "me saca de quicio", "harto", "harta", 
+  "colérico", "colérica"
+],
+
+miedo: [
+  "miedo", "temor", "pánico", "susto", "terror", "espanto", "angustia", 
+  "ansiedad", "nervios", "me da miedo", "estoy con los pelos de punta", 
+  "estoy cagado de miedo", "estoy en shock", "me da cosa", "me pone mal", 
+  "me da pavor", "tengo un mal presentimiento", "estoy asustado", 
+  "estoy asustada", "me pone nervioso", "me pone nerviosa", "asustado", 
+  "temeroso", "nervioso", "ansioso", "aterrorizado", "tengo temor", 
+  "estoy inquieto", "con angustia", "me siento inseguro", 
+  "me tiemblan las manos", "con los pelos de punta", "me da ansiedad", 
+  "estresado", "tengo susto", "siento una amenaza", "presiento algo malo", 
+  "me siento vulnerable", "estoy tenso", "no me siento seguro", 
+  "en estado de alerta", "intranquilo"
+],
+
+ tristeza : [
+ "triste", "tristeza", "deprimido", "decaído", "desanimado", 
+ "melancólico", "llorando", "con el corazón roto", "abatido", 
+ "me siento mal", "desconsolado", "con el alma en el suelo", 
+ "vacío por dentro", "nostálgico", "apagado", "cabizbajo", 
+ "no tengo ganas de nada", "lleno de pena", "me siento solo", 
+ "me siento miserable", "no dejo de llorar", "con mucha carga emocional", 
+ "me duele el alma", "sufriendo por dentro", "hecho polvo", 
+ "me siento derrumbado", "sin ánimos", "desesperanzado",
+ "pena", "dolor", "melancolía", "depresión", "nostalgia",
+ "desánimo", "bajón", "aflicción", "estoy triste",
+ "me siento solo", "me siento vacio", "me siento vacia",
+ "estoy bajoneado", "estoy bajoneada",
+ "tengo el ánimo por el piso",
+ "ando con la moral baja",
+ "estoy hecho polvo",
+ "me partió el alma",
+ "sufriendo"
+],
+
+asco : [
+    "asco", "repugnante", "repulsivo", "desagradable", "horrible",
+    "vomitivo", "me da náuseas", "me da arcadas", "me da asco",
+    "no lo soporto", "me resulta repulsivo", "me revuelve el estómago",
+    "descompuesto", "me siento sucio", "indignante", "me produce rechazo",
+    "me desagrada profundamente", "qué asqueroso", "me da cosa",
+    "me da impresión", "abominable", "detestable", "de mal gusto",
+    "sucio", "asqueroso", "grotesco", "apestoso",
+    "repulsión", "repugnancia", "desagrado", "náuseas", 
+    "disgusto", "rechazo", "estoy asqueado", "estoy asqueada",
+    "lo detesto", "me repugna", "me da un no sé qué", 
+    "me desagrada"
+]
+
   };
 
   for (const [emocion, palabrasClave] of Object.entries(emociones)) {
